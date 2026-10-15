@@ -1,0 +1,38 @@
+.quote {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 24px 20px;
+  margin: 36px 0;
+  padding: 28px 0;
+  border-block: 1px solid var(--line, #d4dce1);
+  color: var(--ink, #122a38);
+}
+.mark {
+  font:
+    400 64px/1 var(--font-display),
+    sans-serif;
+  color: #738e9e;
+}
+.quote blockquote {
+  margin: 0;
+  font:
+    400 clamp(18px, 1.6vw, 23px)/1.5 var(--font-display),
+    sans-serif;
+  letter-spacing: -0.025em;
+}
+.quote figcaption {
+  grid-column: 2;
+}
+@media (max-width: 550px) {
+  .quote {
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 20px 12px;
+    padding-block: 24px;
+  }
+  .mark {
+    font-size: 44px;
+  }
+  .quote blockquote {
+    font-size: 17px;
+  }
+}

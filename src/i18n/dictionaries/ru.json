@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "title": "ВОЙ",
+    "description": "Премиальный байкальский лёд ВОЙ. Формованный, рассыпной и блочный лёд для напитков, гастрономии и событий."
+  },
+  "header": {
+    "homeLabel": "ВОЙ — на главную",
+    "languageLabel": "Выбрать язык",
+    "languageGroupLabel": "Язык сайта",
+    "searchOpenLabel": "Открыть поиск",
+    "searchCloseLabel": "Закрыть поиск",
+    "searchPlaceholder": "Найти на сайте",
+    "searchSubmitLabel": "Искать",
+    "cartLabel": "Корзина, товаров: {count}",
+    "menu": "Меню",
+    "openMenuLabel": "Открыть меню"
+  },
+  "navigation": {
+    "label": "Главная навигация",
+    "close": "Закрыть",
+    "links": {
+      "product": "О продукте",
+      "production": "Производство",
+      "catalog": "Каталог",
+      "cooperation": "Сотрудничество",
+      "blog": "Журнал",
+      "contacts": "Контакты"
+    }
+  },
+  "intro": {
+    "ariaLabel": "ВОЙ. Не просто лёд. Стихия.",
+    "lead": "НЕ ПРОСТО",
+    "ice": "ЛЁД",
+    "element": "СТИХИЯ",
+    "skip": "Пропустить"
+  },
+  "home": {
+    "hero": {
+      "catalogAction": "Выбрать лёд",
+      "cooperationAction": "Сотрудничество",
+      "title": "Байкальский\nлёд",
+      "description": "Для баров, ресторанов и высокой подачи",
+      "subtitle": "Производство в Иркутске, на берегу Байкала"
+    }
+  },
+  "footer": {
+    "eyebrow": "Поставки для HoReCa",
+    "title": "Обсудим лёд для вашего проекта",
+    "contact": "Связаться",
+    "brandDescription": "Производитель формованного, рассыпного и блочного льда в Иркутске.",
+    "company": "Компания",
+    "products": "Продукция",
+    "information": "Информация",
+    "links": {
+      "product": "О продукте",
+      "production": "Производство",
+      "cooperation": "Сотрудничество",
+      "catalog": "Каталог",
+      "cart": "Корзина",
+      "checkout": "Оформление заказа",
+      "blog": "Блог",
+      "privacy": "Конфиденциальность",
+      "terms": "Соглашение",
+      "offer": "Оферта"
+    },
+    "bottomCaption": "Премиальный лёд · Иркутск",
+    "toTop": "В начало ↑"
+  }
+}

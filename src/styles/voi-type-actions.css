@@ -1,0 +1,362 @@
+/* VOI type and actions: one regular font, clear hierarchy, quiet underline CTAs. */
+.voi-header {
+  justify-content: flex-end;
+}
+html[data-site="public"] {
+  --type-heading-tracking: -0.025em;
+  --type-heading-leading: 1.14;
+  --type-body-leading: 1.6;
+  --type-action-weight: 400;
+  --type-page-title-size: clamp(30px, 4.2vw, 64px);
+  --type-section-title-size: clamp(26px, 3.2vw, 48px);
+  --type-card-title-size: clamp(19px, 1.8vw, 26px);
+}
+html[data-site="public"]
+  :is(h1, h2, h3, h4, h5, h6, [role="heading"], .voi-slide-title),
+html[data-site="public"]
+  :is(h1, h2, h3, h4, h5, h6, [role="heading"], .voi-slide-title)
+  * {
+  text-transform: uppercase !important;
+  font-synthesis: none;
+}
+html[data-site="public"] :is(h1, h2, h3, h4, h5, h6) {
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  hyphens: manual;
+}
+html[data-site="public"] :is(h3, h4, h5, h6) {
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+html[data-site="public"] p {
+  text-wrap: pretty;
+}
+html[data-site="public"] :is(input, textarea, select) {
+  font-size: 16px;
+  line-height: 1.5;
+}
+html[data-site="public"] :is(button, [data-ui-action]) {
+  font-synthesis: none;
+}
+html[data-site="public"] .voi-display em {
+  font-size: 1em;
+  font-style: normal;
+}
+html[data-site="public"] .home-page .voi-hero :is(h1, .voi-slide-title) {
+  font-size: clamp(32px, 4.25vw, 64px);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+html[data-site="public"] .voi-history-content {
+  line-height: 1.65;
+}
+html[data-site="public"] .voi-journal h3 {
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.3;
+}
+html[data-site="public"] .voi-water-step h3 {
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.25;
+}
+html[data-site="public"] .voi-nav a {
+  font-size: 12px;
+  font-weight: 400 !important;
+  letter-spacing: 0.015em;
+}
+html[data-site="public"] nav[aria-label="Категории льда"] > a > span {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: clamp(18px, 1.7vw, 24px);
+  letter-spacing: -0.015em;
+}
+
+/* Only actions use this treatment; icon controls, tabs and quantity steppers keep their semantics. */
+html[data-site="public"] :is([data-ui-action], .voi-water-cta) {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: fit-content;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: 48px;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font:
+    400 13px/1.45 var(--font-body),
+    sans-serif !important;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: left;
+  white-space: normal;
+  cursor: pointer;
+  transition:
+    opacity 180ms ease,
+    border-color 180ms ease;
+}
+html[data-site="public"] :is([data-ui-action], .voi-water-cta)::before,
+html[data-site="public"] :is([data-ui-action], .voi-water-cta)::after {
+  content: none;
+}
+html[data-site="public"] :is([data-ui-action], .voi-water-cta):hover {
+  color: inherit;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+@media (hover: hover) {
+  html[data-site="public"] :is([data-ui-action], .voi-water-cta):hover {
+    opacity: 0.7;
+  }
+}
+html[data-site="public"] :is([data-ui-action], .voi-water-cta):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+html[data-site="public"] :is([data-ui-action], .voi-water-cta):disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+html[data-site="public"] .voi-button > span {
+  background: transparent;
+  color: inherit;
+  border-radius: 0;
+  padding: 0;
+  min-height: 0;
+  height: auto;
+  display: block;
+}
+html[data-site="public"] .voi-button > i {
+  background: transparent;
+  color: inherit;
+  border-radius: 0;
+  width: 20px;
+  height: 20px;
+  overflow: visible;
+}
+html[data-site="public"] .voi-button > i svg {
+  width: 18px;
+  height: 18px;
+  transform: none;
+  transition: transform 180ms ease;
+}
+html[data-site="public"] .voi-button > i .voi-arrow-ghost {
+  display: none;
+}
+html[data-site="public"] .highlight-catalog {
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-radius: 12px;
+  padding: 16px;
+  font:
+    400 13px/1.45 var(--font-body),
+    sans-serif;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+@media (hover: hover) {
+  html[data-site="public"] .voi-button:hover > i svg {
+    transform: translateX(3px);
+  }
+}
+@media (max-width: 743px) {
+  html[data-site="public"] .home-page .voi-hero :is(h1, .voi-slide-title) {
+    font-size: clamp(28px, 7.5vw, 44px);
+  }
+  html[data-site="public"] .voi-display {
+    font-size: clamp(28px, 7.4vw, 44px);
+    line-height: 1.16;
+  }
+  html[data-site="public"] .voi-water-journey h2 {
+    font-size: clamp(28px, 7.4vw, 40px);
+  }
+  html[data-site="public"] .voi-water-step h3 {
+    font-size: 18px;
+  }
+  html[data-site="public"] main[data-header-theme="light"] {
+    padding-top: 120px;
+  }
+  html[data-site="public"] :is([data-ui-action], .voi-water-cta) {
+    font-size: 12px !important;
+    letter-spacing: 0.04em;
+    gap: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-site="public"] :is([data-ui-action], .voi-water-cta),
+  html[data-site="public"] .voi-button > i svg {
+    transition: none;
+  }
+}
+@media (max-width: 380px) {
+  .voi-water-step h3,
+  .voi-water-step p {
+    grid-column: 1/-1;
+  }
+  .voi-water-step .voi-water-symbol {
+    grid-row: 1;
+  }
+  .voi-water-step .voi-water-index {
+    align-self: center;
+  }
+}
+
+/* Scroll-driven packaging flight on the product introduction; no pin or scroll lock. */
+.voi-product-flight {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  min-height: 105svh;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.voi-product-flight-content {
+  position: relative;
+  z-index: 2;
+  width: 48%;
+  max-width: 640px;
+}
+.voi-product-flight-content h2 {
+  font-size: clamp(28px, 3.5vw, 52px);
+}
+.voi-product-flight-content p {
+  font-size: clamp(16px, 1.3vw, 20px);
+  margin: 28px 0 32px;
+  max-width: 44ch;
+}
+.voi-product-flight-stage {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.voi-product-flight-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.voi-product-flight-fallback {
+  position: absolute;
+  left: 56%;
+  top: 18%;
+  width: 38%;
+  height: 64%;
+  object-fit: contain;
+}
+.voi-product-flight-stage[data-ready="true"] .voi-product-flight-fallback {
+  visibility: hidden;
+}
+@media (max-width: 799px) {
+  .voi-product-flight {
+    display: block;
+    min-height: 0;
+    padding-bottom: 0;
+  }
+  .voi-product-flight-content {
+    width: 100%;
+    max-width: none;
+  }
+  .voi-product-flight-stage {
+    position: relative;
+    height: 460px;
+    margin: 0 calc(-1 * var(--page-gutter));
+  }
+  .voi-product-flight-fallback {
+    left: 15%;
+    top: 10%;
+    width: 70%;
+    height: 80%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .voi-product-flight-stage canvas {
+    display: none;
+  }
+  .voi-product-flight-stage .voi-product-flight-fallback {
+    visibility: visible;
+  }
+}
+
+/* Shared glass: preserve the view behind the blur rather than covering it with opaque paint. */
+.voi-highlights > a {
+  position: relative;
+  z-index: 0;
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.voi-highlights > a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  background: rgb(20 14 7 / 40%);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+.voi-highlights > a:hover {
+  background: transparent;
+}
+.voi-footer-legal {
+  align-items: center;
+  padding: 24px 0 8px;
+  gap: 24px;
+  isolation: isolate;
+}
+.voi-footer-legal::before {
+  content: "";
+  position: absolute;
+  inset: -32px -22px -22px;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgb(0 0 0 / 60%));
+}
+.voi-footer-legal-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+.voi-footer-legal-links a {
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+  opacity: 0.75;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+}
+.voi-footer-legal-links a:hover,
+.voi-footer-legal-links a:focus-visible {
+  opacity: 1;
+}
+@media (max-width: 800px) {
+  .voi-footer-legal {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+  }
+  .voi-footer-legal-links {
+    grid-column: 1/-1;
+    grid-row: 1;
+    justify-content: flex-start;
+    gap: 6px 16px;
+  }
+  .voi-footer-legal > a {
+    justify-self: end;
+  }
+}

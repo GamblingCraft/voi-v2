@@ -1,0 +1,42 @@
+.formatFeature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 8%;
+  padding: 32px;
+  border-radius: 10px;
+  background: white;
+}
+.formatMedia {
+  min-height: 430px;
+  background: #dbe5eb;
+  border-radius: 6px;
+}
+.formatContent {
+  align-self: center;
+}
+.formatContent h2 {
+  font-size: 48px;
+}
+.formatContent p {
+  max-width: 400px;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 24px 0;
+}
+.muted {
+  color: var(--muted);
+}
+@media (max-width: 600px) {
+  .formatFeature {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding: 20px;
+  }
+  .formatMedia {
+    min-height: 0;
+    aspect-ratio: 1.2;
+  }
+  .formatContent h2 {
+    font-size: 38px;
+  }
+}

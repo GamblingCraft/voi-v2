@@ -1,0 +1,128 @@
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #183342;
+  font-size: 14px;
+  font-family: var(--font-body), sans-serif;
+}
+.rating svg {
+  color: #e8b525;
+}
+.purchase {
+  margin-top: auto;
+}
+.weights {
+  padding: 0;
+  margin: 0 0 14px;
+  border: 0;
+}
+.weights legend {
+  font-size: 12px;
+  color: #53636e;
+  margin-bottom: 9px;
+}
+.weights > div {
+  display: flex;
+  gap: 8px;
+}
+.weights label {
+  position: relative;
+  cursor: pointer;
+}
+.weights input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.weights span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 44px;
+  min-width: 64px;
+  padding: 10px 14px;
+  border-radius: var(--button-radius);
+  border: 1px solid transparent;
+  background: #f2f4f5;
+  font-size: 14px;
+  color: #142e3e;
+}
+.weights input:checked + span {
+  border-color: #142e3e;
+  background: #e5edf1;
+}
+.weights input:focus-visible + span {
+  outline: 2px solid #227eaa;
+  outline-offset: 3px;
+}
+.buyRow {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.buy {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  min-height: var(--button-height);
+  padding: var(--button-padding);
+  background: #10191e;
+  border: 0;
+  border-radius: var(--button-radius);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+
+  text-align: center;
+  font-family: var(--font-body), sans-serif;
+}
+.buy:hover {
+  background: #24485c;
+}
+.buy:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  border: 1px solid #d4dee8;
+  border-radius: var(--button-radius);
+  background: #fff;
+  color: #183342;
+  font-family: var(--font-body), sans-serif;
+  font-size: 14px;
+}
+.quantity span {
+  min-width: 36px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.quantity button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  min-height: 46px;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: #58717b;
+  cursor: pointer;
+}
+.quantity button:hover {
+  background: #f2f4f5;
+}
+.quantity button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.quantity button:focus-visible,
+.buy:focus-visible {
+  outline: 2px solid #227eaa;
+  outline-offset: 3px;
+}

@@ -1,0 +1,84 @@
+/* Exact outline version of the supplied VOI pattern, kept outside the reading columns. */
+.product-root #hero.voi-editorial-hero::after {
+  content: none;
+}
+.product-root #hero.voi-editorial-hero {
+  overflow: hidden;
+}
+.product-root #content > main > .product {
+  position: relative;
+  overflow: visible;
+}
+.product .voi-ornament-scene {
+  position: relative;
+  display: flow-root;
+  background: var(--color-cloud-background);
+}
+.product .voi-ornament-scene > section {
+  position: relative;
+  z-index: 1;
+}
+.product-root .product .voi-ornament-scene > :is(#brand-story, #zip-story) {
+  background: transparent !important;
+}
+.product .voi-product-ornament {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  color: #679eb6;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 72px);
+  mask-image: linear-gradient(to bottom, transparent, #000 72px);
+}
+.product .voi-product-ornament svg {
+  position: absolute;
+  top: 0;
+  width: 16vw;
+  height: 100%;
+  opacity: 0.65;
+}
+.product .voi-product-ornament .voi-pattern-left {
+  left: 0;
+}
+.product .voi-product-ornament .voi-pattern-right {
+  left: auto;
+  right: 0;
+}
+.product .voi-product-ornament path {
+  stroke: currentColor;
+  stroke-width: 0.65px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  /* Hidden before hydration too: no flash of the complete pattern. */
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.product #brand-heading,
+.product #brand-content {
+  z-index: 1;
+}
+@media (max-width: 700px) {
+  .product .voi-product-ornament svg {
+    width: 10vw;
+    top: 0;
+    height: 100%;
+    opacity: 0.5;
+  }
+  .product #brand-heading,
+  .product #brand-content {
+    width: 76vw;
+    left: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .product .voi-product-ornament path {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+  }
+}

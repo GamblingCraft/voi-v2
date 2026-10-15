@@ -1,0 +1,346 @@
+@media screen and (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) {
+  .product {
+    --p1: 17vw;
+    --p2: 5.9vw;
+    --p4: 12px;
+    --p5: 2vw;
+  }
+  .product #product-scene {
+    filter: blur(0);
+    z-index: -999;
+  }
+  @keyframes mover {
+    0% {
+      transform: translate(-50vw);
+    }
+    to {
+      transform: translate(-265vw);
+    }
+  }
+  .product #hero .hero-description {
+    width: 80vw;
+    left: 10vw;
+    top: 70.5vh;
+    position: absolute;
+  }
+  .product-root #wrapper {
+    position: relative;
+    top: 0;
+  }
+  .product-root #content {
+    height: auto;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+  }
+  .product #hero {
+    margin-top: 0;
+  }
+  .product #hero h3 {
+    transform: translateY(6.4vw);
+  }
+  .product #barcode1 {
+    width: 28vw;
+    right: -8.7vw;
+    top: 43vh;
+  }
+  .product #bg {
+    z-index: -99;
+    background: linear-gradient(180deg, #dbdad9, #f6f8f8);
+  }
+  .product #middle {
+    position: initial;
+    height: 75vh;
+    justify-content: flex-end;
+  }
+  .product #att {
+    display: none;
+  }
+  .product #scroll {
+    bottom: 25vh;
+    z-index: 99;
+  }
+  .product .charin {
+    transform: translateY(16.2vw);
+  }
+  .product #brand-heading {
+    display: none;
+  }
+  .product #brand-heading-mobile {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--p2);
+    text-transform: uppercase;
+    padding: 2vw;
+  }
+  .product .brand-heading-line {
+    display: block;
+    text-align: center;
+  }
+  .product .brand-heading-line span {
+    top: 1.7vw;
+    left: 0;
+    position: relative;
+    font-size: 8vw;
+  }
+  .product #brand-content {
+    position: relative;
+    width: 100vw;
+    left: 0;
+    top: 13vw;
+    flex-direction: column;
+  }
+  .product #brand-content p {
+    margin-bottom: 4vw;
+    padding: 0 2vw;
+  }
+  .product #eco {
+    position: relative;
+    width: 23vw;
+    top: 3vw;
+    padding: 1vw;
+    left: 74vw;
+  }
+  .product #eco img {
+    width: 5vw;
+    top: 0;
+    margin-right: 1.5vw;
+  }
+  .product #heading-ice {
+    display: inline;
+    opacity: 0;
+  }
+  .product #zip-story h2 {
+    width: 100vw;
+  }
+  .product #zip-story {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 50vw;
+  }
+  .product #zip-story h3 {
+    width: 70vw;
+    text-align: center;
+    margin-top: 7.5vw;
+  }
+  .product .tit3 {
+    text-align: center !important;
+  }
+  .product #zip-content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 20vw;
+  }
+  .product .zip-content-column {
+    width: 100%;
+  }
+  .product #zip-story p {
+    margin-bottom: 2vw;
+  }
+  .product #zip-story img.right {
+    left: -20vw;
+    right: auto;
+    width: 20vw;
+    top: -98.9vw;
+    transform: rotate(90deg);
+  }
+  .product #zip-story img {
+    right: auto;
+    left: 73vw;
+    top: -75vw;
+    width: 8.5vw;
+  }
+  .product #pvd-story {
+    margin-top: 40vw;
+  }
+  .product #zip-border,
+  .product #pvd-border,
+  .product #cup-border {
+    border-radius: 3vw;
+  }
+  .product #zip-frame {
+    min-width: 60vw;
+    height: 57vh;
+    margin: 2vw;
+  }
+  .product .lat {
+    left: -11.3vw;
+    top: -17vw;
+  }
+  .product #pvd-story h2 {
+    width: 96vw;
+    left: 2vw;
+  }
+  .product .interactive {
+    width: 40vw;
+    right: auto;
+    top: -40vw;
+    left: 33vw;
+    opacity: 1;
+  }
+  .product .hotspicy {
+    width: 50vw;
+    right: 2vw;
+    left: auto;
+    top: 88vw;
+    z-index: 9;
+  }
+  .product .hotspicy .tit3 {
+    text-align: right !important;
+  }
+  .product #pvd-content {
+    width: 100vw;
+    display: flex;
+    left: 0;
+    position: relative;
+    margin-top: 31vw;
+    flex-direction: column;
+  }
+  .product .numdos {
+    margin-top: 3vw;
+    width: 13.5vw;
+    left: 84vw;
+    position: absolute;
+    top: 67vw;
+  }
+  .product #pvd-border {
+    transform: translate(0);
+  }
+  .product #cup-story {
+    margin-top: 60vw;
+  }
+  .product #pvd-frame {
+    min-width: 68vw;
+    margin: 2vw;
+  }
+  .product #pvd-frame .lat {
+    left: -21.3vw;
+    top: -29vw;
+  }
+  .product #cup-story h2 {
+    width: 96vw;
+    left: 2vw;
+    margin-top: 5vw;
+  }
+  .product #cup-heading {
+    width: 500vw;
+  }
+  .product .cooltext {
+    width: 96vw;
+    flex-direction: column;
+    left: 2vw;
+  }
+  .product #cup-story h3 {
+    width: 96vw;
+    left: 2vw;
+  }
+  .product #cup-frame {
+    min-width: 58vw;
+    margin: 2vw;
+  }
+  .product #cup-frame .lat {
+    left: -7.1vw;
+    top: -14vw;
+  }
+  .product #closing-story {
+    margin-top: 0;
+  }
+  .product #footer-stage button {
+    width: 96vw;
+    margin-left: 0;
+  }
+  .product #footer-stage button {
+    width: 96vw;
+    margin-left: 2vw;
+    bottom: 15vw;
+    background: white;
+    border: 1px solid var(--color);
+  }
+  .product #footer-stage button a {
+    color: var(--color);
+  }
+  .product #footer-stage {
+    height: calc(100vh - 20vw);
+    margin-top: -3vw;
+  }
+  @keyframes pantalla0 {
+    0% {
+      transform: translate(-4vw);
+    }
+    to {
+      transform: translate(-66.3vw);
+    }
+  }
+  .product #mobile-scene {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+  }
+  .product .numtres {
+    display: none;
+  }
+  .product #cup-description {
+    width: 6vw;
+    top: -2.5vw;
+    left: 5vw;
+  }
+  .product #closing-heading {
+    position: relative;
+    width: 96vw !important;
+    left: 3vw !important;
+    text-align: left !important;
+    display: block !important;
+  }
+  .product #closing-content {
+    flex-direction: column;
+    width: 81vw;
+    left: 2vw;
+  }
+  .product #link {
+    width: 90vw;
+    overflow: hidden;
+    border-radius: 5vw;
+    position: absolute;
+    left: 5vw;
+    margin-top: 3vw;
+    top: 0;
+  }
+  .product #closing-story {
+    height: 265vw;
+    border-radius: 5vw;
+  }
+  .product #date {
+    right: 8.9vw;
+    top: 6.9vw;
+  }
+  .product .product-stage {
+    z-index: 99;
+  }
+  .product table th,
+  .product .table td {
+    text-align: right;
+    width: 9.5vw;
+  }
+  .product #welcomemov {
+    display: block;
+    font-size: var(--p4);
+    text-transform: uppercase;
+    width: 43vw;
+    position: absolute;
+    top: 47.3vh;
+    left: -18vw;
+    transform: rotate(-90deg);
+    text-align: right;
+  }
+  .product #hero,
+  .product .product-stage,
+  .product #mobile-scene {
+    height: 220vw;
+  }
+}
+.product {
+  --swiper-theme-color: #007aff;
+}

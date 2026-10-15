@@ -1,0 +1,113 @@
+.section {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 8vw;
+  padding: clamp(64px, 8vw, 128px) var(--page-gutter);
+  background: var(--color-cloud-background);
+  color: #122a38;
+}
+.section h2 {
+  margin: 0;
+  font:
+    400 var(--type-section-title-size)/var(--type-heading-leading)
+      var(--font-display),
+    sans-serif;
+  letter-spacing: var(--type-heading-tracking);
+}
+.faq {
+  min-width: 0;
+  color: #122a38;
+  font:
+    400 var(--type-body-size)/var(--type-body-leading) var(--font-body),
+    sans-serif;
+}
+.item {
+  border-top: 1px solid #d4dce1;
+}
+.item:last-child {
+  border-bottom: 1px solid #d4dce1;
+}
+.faq .question {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 27px 0;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-family: var(--font-body), sans-serif;
+  line-height: var(--type-body-leading);
+  text-align: left;
+  cursor: pointer;
+  font-size: clamp(22px, 1.8vw, 28px);
+  letter-spacing: -0.025em;
+}
+.plus {
+  flex-shrink: 0;
+  font-size: 26px;
+  font-weight: 400;
+  transition: transform 500ms var(--ease-out, ease);
+}
+.item[data-open="true"] .plus {
+  transform: rotate(45deg);
+}
+.answer p {
+  max-width: 560px;
+  color: #53636e;
+  font-size: var(--type-body-size);
+  margin: 0 0 1em;
+  line-height: var(--type-body-leading);
+  padding: 0 30px 25px 0;
+}
+
+@media (max-width: 800px) {
+  .section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .plus,
+  .answer {
+    transition: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .faq .question {
+    font-size: var(--type-body-size);
+  }
+}
+
+.heading {
+  margin: 0;
+}
+:global(html[data-site="public"]) .faq .question {
+  font-weight: 400;
+}
+.answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 500ms var(--ease-out, ease),
+    opacity 350ms ease;
+}
+.item[data-open="true"] .answer {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.answerClip {
+  min-height: 0;
+  overflow: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+  .answer {
+    transition: none;
+  }
+}

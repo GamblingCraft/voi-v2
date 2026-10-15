@@ -1,0 +1,506 @@
+.voi-hero {
+  height: 95vh;
+  min-height: 0;
+}
+.voi-hero-content-stack {
+  display: grid;
+  position: relative;
+  max-width: calc(100% - 426px);
+}
+.voi-hero-content {
+  grid-area: 1/1;
+  max-width: none;
+  gap: 18px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  justify-content: flex-end;
+}
+.voi-hero-content.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.home-page .voi-hero .voi-slide-title {
+  font-family: var(--font-tt-norms-expanded), sans-serif;
+  font-size: clamp(42px, calc(28.896px + 3.36vw), 86px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  text-transform: none;
+  font-variation-settings:
+    "SERF" 50,
+    "wght" 300;
+}
+.voi-slide {
+  transition: none;
+  visibility: hidden;
+}
+.voi-slide.active {
+  visibility: visible;
+}
+.voi-hero-background:after {
+  z-index: 3;
+}
+.voi-thumbs {
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex-shrink: 0;
+}
+.voi-thumbs::-webkit-scrollbar {
+  display: none;
+}
+.voi-thumbs > button:not(.voi-pause) {
+  width: clamp(230px, calc(224.033px + 1.53vw), 250px);
+  flex: 0 0 clamp(200px, calc(185.102px + 3.82vw), 250px);
+}
+.voi-thumbs > button.active:before {
+  display: none;
+}
+.voi-thumb-progress {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.voi-thumbs figure {
+  width: 102px;
+  height: 62px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 0;
+}
+.voi-thumbs figure img {
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.voi-thumbs button > span {
+  height: 62px;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  font-size: clamp(10px, calc(9.602px + 0.153vw), 12px);
+  line-height: 1.2;
+}
+.voi-thumbs button:hover figure img {
+  transform: scale(1.1);
+}
+.voi-thumbs button:hover > span {
+  transform: translateX(4px);
+}
+.voi-button {
+  height: 52px;
+}
+.voi-button > span {
+  height: 100%;
+  padding: 0 calc(20.4px + 0.21vw);
+  min-height: 0;
+}
+.voi-button > i {
+  position: relative;
+  overflow: hidden;
+  width: 68px;
+  flex-shrink: 0;
+  height: 100%;
+}
+.voi-button > i svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.voi-button > i .voi-arrow-ghost {
+  position: absolute;
+  left: calc(50% - 10px);
+  transform: translateX(-80px);
+}
+.voi-button:hover > i {
+  transform: none;
+}
+.voi-button:hover > i svg {
+  transform: translateX(80px);
+}
+.voi-button:hover > i .voi-arrow-ghost {
+  transform: translateX(0);
+}
+.voi-button:active {
+  transform: scale(0.98);
+}
+.voi-header {
+  top: 30px;
+}
+.voi-nav {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: clamp(800px, calc(705.932px + 24.12vw), 1116px);
+  max-width: calc(100vw - 180px);
+}
+.voi-magazine {
+  padding: calc(20.4px + 0.21vw) 0;
+  min-height: 100vh;
+}
+.voi-photo-ribbon,
+.voi-photo-ribbon.reverse {
+  width: max-content;
+  gap: clamp(10px, calc(6.412px + 0.92vw), 22px);
+  transform: none;
+  margin: 0;
+  padding-right: clamp(10px, calc(6.412px + 0.92vw), 22px);
+}
+.voi-photo-ribbon img {
+  width: clamp(104px, calc(69.485px + 8.85vw), 220px);
+  height: clamp(150px, calc(100.587px + 12.67vw), 316px);
+  border-radius: clamp(6px, calc(4.206px + 0.46vw), 12px);
+  flex-shrink: 0;
+}
+.voi-magazine > h2 {
+  padding-top: calc(27px + 3.71vw);
+}
+.voi-magazine > .voi-button {
+  margin-bottom: calc(27px + 3.71vw);
+}
+@media (min-width: 744px) {
+  .voi-highlights {
+    display: grid;
+    width: 396px;
+    height: 352px;
+    flex-shrink: 0;
+  }
+  .voi-thumb-line {
+    display: block;
+  }
+}
+@media (max-width: 1290px) {
+  .voi-nav {
+    display: none;
+  }
+}
+@media (max-width: 743px) {
+  .voi-hero {
+    height: 95vh;
+    min-height: 0;
+  }
+  .voi-hero-content-stack {
+    max-width: 100%;
+    width: 100%;
+  }
+  .voi-highlights {
+    display: none;
+  }
+  .voi-thumb-line {
+    display: none;
+  }
+  .voi-hero-top {
+    padding: 20px 20px 0;
+  }
+  .voi-thumbs {
+    padding: 0 20px 18px;
+  }
+  .voi-hero-content {
+    max-width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .voi-slide,
+  .voi-hero-content {
+    transform: none !important;
+  }
+  .voi-button > i svg {
+    transition: none;
+  }
+  .voi-thumb-progress {
+    display: none;
+  }
+}
+.voi-journey {
+  padding: calc(37px + 9vw) 0 calc(29.4px + 4.98vw);
+  min-height: 0;
+}
+.voi-journey > h2 {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin: 0 auto;
+}
+.voi-journey-scroll {
+  position: relative;
+  height: calc(82px + 32.82vw);
+  z-index: 1;
+}
+.voi-journey-animation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.voi-journey-animation canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.voi-journey-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.voi-journey-labels a {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  font-size: clamp(14px, 1.4vw, 22px);
+  color: inherit;
+  white-space: nowrap;
+}
+.voi-journey-labels a:nth-child(1) {
+  top: 98%;
+  left: 25.75%;
+}
+.voi-journey-labels a:nth-child(2) {
+  top: 56%;
+  left: 41.5%;
+}
+.voi-journey-labels a:nth-child(3) {
+  top: 84%;
+  left: 58%;
+}
+.voi-journey-labels a:nth-child(4) {
+  top: 53%;
+  left: 74.2%;
+}
+.voi-journey-content {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: calc(22px + 1.06vw);
+  width: 50%;
+  max-width: none;
+}
+.voi-journey-content p {
+  margin: 0;
+}
+.voi-journey-content .voi-button {
+  margin: 0;
+}
+.voi-history {
+  padding-top: clamp(82px, calc(72.484px + 2.44vw), 114px);
+  padding-bottom: calc(25.4px + 2.86vw);
+}
+.voi-history > .voi-button {
+  margin-top: calc(22px + 1.06vw);
+}
+html[data-site="public"] .voi-display {
+  font-size: clamp(68px, calc(52.517px + 3.97vw), 120px);
+  line-height: 0.94;
+  letter-spacing: -0.06em;
+}
+.voi-display em {
+  font-size: clamp(38px, calc(33.242px + 1.22vw), 54px);
+}
+@media (max-width: 1023px) {
+  .voi-journey-scroll {
+    overflow-x: auto;
+    scrollbar-width: none;
+    height: auto;
+    padding-bottom: 30px;
+  }
+  .voi-journey-animation {
+    width: clamp(1100px, calc(921.38px + 45.8vw), 1700px);
+    height: auto;
+    aspect-ratio: 3400/1280;
+  }
+  .voi-journey-content {
+    margin-top: calc(30px + 5.29vw);
+    width: 70%;
+  }
+  .voi-journey-labels a:first-child {
+    top: 95%;
+  }
+}
+@media (max-width: 743px) {
+  .voi-journey > h2 {
+    max-width: 90%;
+  }
+  .voi-journey-content {
+    width: 85%;
+  }
+}
+.voi-history {
+  min-height: 100vh;
+}
+.voi-photo-composition {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  width: calc((100vw - 40px) * 25 / 32);
+  margin: calc(-20.4px - 0.21vw) auto 0;
+  perspective: 1500px;
+}
+.voi-photo-composition > svg {
+  grid-area: 1/1;
+  width: 100%;
+  pointer-events: none;
+}
+.voi-photo-composition circle {
+  fill: none;
+  stroke: #58c8ed;
+  opacity: 0.16;
+}
+.voi-photo-composition > ul {
+  position: absolute;
+  grid-area: 1/1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+.voi-photo-composition .item {
+  position: relative;
+  display: block;
+  width: fit-content;
+  pointer-events: auto;
+}
+.voi-photo-composition .item img {
+  display: block;
+  max-width: none;
+  height: auto;
+  border-radius: 4px;
+}
+.voi-photo-composition .voi-history-main {
+  grid-area: 1/1;
+  position: relative;
+  width: calc(52px + 16.94vw);
+  height: auto;
+  pointer-events: none;
+}
+.voi-history-content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: calc(25px + 2.65vw) !important;
+}
+@media (max-width: 1023px) {
+  .voi-photo-composition {
+    width: calc(100vw - 40px);
+    margin: clamp(40px, calc(37.036px + 0.76vw), 50px) auto 0;
+  }
+  .voi-photo-composition .item img {
+    width: clamp(110px, calc(107.036px + 0.76vw), 120px) !important;
+  }
+  .voi-history-content {
+    position: relative;
+    left: auto;
+    transform: none;
+    margin: 40px auto 0 !important;
+  }
+}
+@media (max-width: 743px) {
+  .voi-photo-composition .item img {
+    width: clamp(80px, calc(68.105px + 3.05vw), 120px) !important;
+  }
+}
+@media (max-width: 410px) {
+  .voi-photo-composition .item img {
+    width: clamp(60px, calc(42.138px + 4.58vw), 120px) !important;
+  }
+}
+.voi-button > i {
+  width: 62px;
+}
+.voi-button > i svg {
+  width: 14px;
+  height: 14px;
+}
+.voi-button > i .voi-arrow-ghost {
+  left: calc(50% - 7px);
+}
+.voi-pause {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  padding: 0;
+  border: 0;
+}
+.voi-pause:focus-visible {
+  position: relative !important;
+  width: 40px;
+  height: 40px;
+  clip-path: none;
+}
+.voi-product-strip {
+  height: auto;
+  padding-top: calc(20.2px + 0.11vw);
+  cursor: grab;
+}
+.voi-product-strip:active {
+  cursor: grabbing;
+}
+.voi-strip-track {
+  animation: none;
+  gap: 12px;
+  padding-right: 12px;
+}
+.voi-strip-track > a {
+  width: clamp(162px, calc(124.482px + 9.62vw), 288px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(18px, calc(14.412px + 0.92vw), 30px);
+  user-select: none;
+}
+.voi-strip-track > a > div {
+  width: 100%;
+  height: clamp(94px, calc(69.001px + 6.41vw), 178px);
+}
+.voi-strip-track img {
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.voi-strip-track > a:hover img {
+  transform: scale(1.05);
+}
+.voi-strip-track h2 {
+  min-height: 64px;
+  line-height: 1;
+  transition:
+    opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@media (max-width: 1023px) {
+  .voi-strip-track h2 {
+    opacity: 1;
+    transform: none;
+    margin-top: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .voi-product-strip {
+    overflow-x: auto;
+  }
+  .voi-strip-track > a[aria-hidden="true"] {
+    display: none;
+  }
+}
+html[data-site="public"] {
+  scrollbar-width: none;
+  scrollbar-gutter: auto;
+}
+html[data-site="public"]::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 1290px) {
+  .voi-header {
+    top: 42px;
+  }
+  .voi-logo {
+    top: -14px;
+  }
+}
+.voi-journey-scroll {
+  width: 100%;
+  min-width: 0;
+}

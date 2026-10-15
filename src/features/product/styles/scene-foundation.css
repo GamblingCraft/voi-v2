@@ -1,0 +1,122 @@
+.product * {
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.product {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font-body), sans-serif;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+}
+.product ::-webkit-scrollbar {
+  width: 0px;
+}
+.product-root #content {
+  position: relative;
+  height: auto;
+}
+.product-root #content.fix {
+  position: fixed;
+  height: 100vh;
+}
+.product-root #wrapper.ready #content {
+  height: auto;
+}
+.product-root #wrapper {
+  color: var(--color);
+}
+.product a {
+  text-decoration: none;
+  color: inherit;
+}
+.product {
+  --p1: 9.8vw;
+  --p2: 2.7vw;
+  --p3: 1.5vw;
+  --p4: max(12px, 0.84vw);
+  --p5: max(10px, 0.6vw);
+  --s1: 0.76vw;
+  --color: #000;
+}
+.product #brand-heading-mobile,
+.product #closing-heading,
+.product #welcomemov {
+  display: none;
+}
+.product #product-scene {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 0;
+  transform: translateZ(0);
+  filter: none;
+}
+.product section {
+  width: 100vw;
+  padding: 0vw;
+  position: relative;
+  height: auto;
+}
+.product .cap {
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0.3vw;
+}
+.product #date {
+  position: absolute;
+  right: 0.9vw;
+  left: auto;
+  top: 0.7vw;
+}
+.product #bg {
+  position: fixed;
+  background: linear-gradient(0deg, #dbdad9, #f6f8f8);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  top: 0;
+}
+.product h1,
+.product h2 {
+  font-size: var(--p1);
+  text-transform: uppercase;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 400;
+  line-height: 0.9;
+}
+.product h3 {
+  font-size: var(--p2);
+  text-transform: uppercase;
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  line-height: 0.9;
+}
+.product h4,
+.product p {
+  font-size: var(--p4);
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 400;
+  font-family: var(--font-body), sans-serif;
+}

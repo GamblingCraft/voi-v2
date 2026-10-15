@@ -1,0 +1,205 @@
+.languageSelector {
+  position: relative;
+}
+
+.trigger {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  gap: 0.5rem;
+  border: 0;
+  padding: 0 0.35rem;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--font-ui), sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.chevron {
+  transition: transform 200ms ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.options {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  width: 11.25rem;
+  padding: 0.35rem;
+  background: #f1f3f1;
+  box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 22%);
+  color: #141819;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-0.4rem);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    visibility 0s linear 180ms;
+}
+
+.optionsOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    visibility 0s;
+}
+
+.option {
+  display: flex;
+  width: 100%;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  padding: 0 0.7rem;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--font-body, sans-serif), sans-serif;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.option:hover,
+.option[aria-pressed="true"] {
+  background: #d4ecf4;
+}
+
+.optionCode {
+  font-size: 0.68rem;
+  opacity: 0.55;
+}
+
+.languageSelector[data-theme="dark"] .options {
+  background: #020304;
+  color: #f6f8f8;
+  box-shadow: none;
+}
+.languageSelector[data-theme="dark"] .option:hover,
+.languageSelector[data-theme="dark"] .option[aria-pressed="true"] {
+  background: #ffffff14;
+}
+
+@media (max-width: 47.99rem) {
+  .trigger {
+    min-height: 2.75rem;
+    gap: 0.35rem;
+    padding: 0 0.15rem;
+    font-size: 0.65rem;
+  }
+
+  .options {
+    width: 10rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chevron,
+  .options {
+    transition: none;
+  }
+}
+
+.option:disabled {
+  opacity: 0.5;
+  cursor: default;
+  background: transparent;
+}
+
+/* Compact globe control and soft dropdown, for the header utilities. */
+.trigger {
+  gap: 8px;
+  min-height: 44px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.options {
+  border-radius: 10px;
+  padding: 6px;
+  background: rgba(246, 248, 248, 0.94);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 28px #00000012;
+  transform: translateY(-6px) scale(0.97);
+  transform-origin: top right;
+}
+.optionsOpen {
+  transform: translateY(0) scale(1);
+}
+.option {
+  border-radius: 6px;
+  font-size: 12px;
+  transition: background 0.2s;
+}
+.optionCode {
+  font-size: 12px;
+}
+.languageSelector[data-theme="dark"] .options {
+  background: rgba(25, 30, 32, 0.9);
+}
+
+.globe {
+  display: block;
+  flex-shrink: 0;
+}
+.continents {
+  animation: continentsDrift 5s linear infinite;
+  animation-play-state: paused;
+}
+.trigger[aria-expanded="true"] .continents {
+  animation-play-state: running;
+}
+@media (hover: hover) {
+  .trigger:hover .continents {
+    animation-play-state: running;
+  }
+}
+@keyframes continentsDrift {
+  to {
+    transform: translateX(-48px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .continents {
+    animation: none;
+  }
+}
+
+.options,
+.languageSelector[data-theme="dark"] .options {
+  background: transparent;
+  color: #f6f8f8;
+  backdrop-filter: none;
+  box-shadow: none;
+  isolation: isolate;
+}
+.options::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: rgb(20 14 7 / 40%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  pointer-events: none;
+}
+.option:hover,
+.option[aria-pressed="true"] {
+  background: #ffffff18;
+}
+
+.options .option[aria-pressed="true"],
+.languageSelector[data-theme="dark"] .options .option[aria-pressed="true"] {
+  background: rgb(0 0 0 / 28%);
+}

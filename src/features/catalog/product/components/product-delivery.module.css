@@ -1,0 +1,23 @@
+.purchaseDelivery {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 0 0;
+  margin-top: 28px;
+  border-top: 1px solid #d4dfe5;
+}
+.purchaseDelivery > svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.purchaseDelivery h2 {
+  font-size: 26px;
+  margin: 0 0 12px;
+}
+.purchaseDelivery p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #53636e;
+  margin: 0;
+  max-width: 48ch;
+}

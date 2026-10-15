@@ -1,0 +1,140 @@
+.filters h3 {
+  font-family: var(--font-body), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 8px 0 28px;
+}
+.filters fieldset {
+  border: 0;
+  padding: 0 0 24px;
+  margin: 0 0 24px;
+  border-bottom: 1px solid var(--line);
+}
+.filters legend {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  padding: 0;
+}
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.radio input {
+  width: 19px;
+  height: 19px;
+  margin: 0;
+  accent-color: var(--ink);
+  cursor: pointer;
+}
+.sort {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.sort select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: white;
+  color: var(--ink);
+  min-height: 44px;
+  padding: 10px;
+  font-size: 13px;
+}
+.apply {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border: 1px solid var(--ink);
+  border-radius: var(--button-radius);
+  background: var(--ink);
+  color: white;
+  padding: 12px 18px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.apply {
+  width: 100%;
+  margin-top: 20px;
+}
+.apply:hover {
+  background: #294d61;
+}
+.resetFilters {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  font-size: 13px;
+  text-decoration: none !important;
+  color: var(--muted);
+}
+.mobileFilters {
+  display: none;
+}
+@media (max-width: 900px) {
+  .mobileFilters {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 12px 16px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: white;
+    color: var(--ink);
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .mobileFilters svg {
+    width: 20px;
+    height: 20px;
+  }
+  .mobileFilters > span {
+    margin-left: auto;
+  }
+  .filterContent {
+    display: none;
+  }
+  .filterPanel[data-expanded="true"] .filterContent {
+    display: block;
+    padding: 24px;
+    background: white;
+    margin-top: 8px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  .filters h3 {
+    display: none;
+  }
+  .filters fieldset {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+  }
+  .filters .sort {
+    max-width: 300px;
+  }
+  .apply {
+    max-width: 300px;
+  }
+  .resetFilters {
+    max-width: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .filters fieldset {
+    width: 100%;
+  }
+  .filterPanel[data-expanded="true"] .filterContent {
+    padding: 20px;
+  }
+}

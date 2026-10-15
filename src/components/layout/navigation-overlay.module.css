@@ -1,0 +1,242 @@
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  background: #020304;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 300ms ease,
+    visibility 0s linear 900ms;
+}
+
+.backdropOpen {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 300ms ease,
+    visibility 0s;
+}
+
+.navigation {
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  overflow: hidden;
+  background: transparent;
+  color: #f6f8f8;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 300ms ease,
+    visibility 0s linear 900ms;
+}
+.navigationOpen {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 300ms ease,
+    visibility 0s;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.5rem;
+  right: var(--page-gutter);
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  gap: 0.8rem;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--font-ui), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.closeButton span:last-child {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.links {
+  position: absolute;
+  top: 15%;
+  right: var(--page-gutter);
+  display: flex;
+  width: min(48vw, 54rem);
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.link {
+  overflow: hidden;
+  color: inherit;
+  font-family: var(--font-ui), sans-serif;
+  font-size: clamp(1.75rem, 3.35vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  text-align: right;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link > span {
+  display: block;
+  transform: translateY(115%) rotate(3deg);
+  transform-origin: right bottom;
+  transition:
+    color 180ms ease,
+    transform 650ms var(--ease-out);
+}
+
+.navigationOpen .link > span {
+  transform: translateY(0) rotate(0);
+  transition-delay: calc(180ms + var(--link-index) * 55ms);
+}
+
+.link:hover > span {
+  color: var(--color-accent);
+}
+.mobileTools {
+  display: none;
+}
+
+@media (max-width: 47.99rem) {
+  .navigation {
+    overflow-y: auto;
+    padding: 100px var(--page-gutter) 32px;
+  }
+  .closeButton {
+    top: 1rem;
+    font-size: 0.75rem;
+  }
+
+  .links {
+    position: static;
+    width: 100%;
+    gap: 1.2rem;
+  }
+
+  .link {
+    font-size: clamp(1.375rem, 7.2vw, 2.625rem);
+  }
+  .mobileTools {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+    margin-top: 36px;
+  }
+  .utilityRow {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+  .mobileTools :is(a, input, button):focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop,
+  .navigation,
+  .link > span {
+    transition-duration: 1ms;
+    transition-delay: 0s;
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .utilityRow {
+    width: auto;
+    max-width: 100%;
+    gap: 10px;
+    padding: 0 8px;
+    border-radius: 999px;
+    background: rgb(20 14 7 / 40%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .utilityRow {
+    flex-wrap: wrap;
+    border-radius: 20px;
+    gap: 8px;
+  }
+  .utilityRow :global(#header-cart-preview) {
+    position: fixed;
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+    max-height: calc(100svh - 100px);
+  }
+}
+
+.mobileBrand {
+  display: none;
+}
+@media (max-width: 47.99rem) {
+  .navigation {
+    padding-bottom: 120px;
+  }
+  .utilityRow {
+    position: relative;
+    isolation: isolate;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .utilityRow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: rgb(20 14 7 / 40%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    pointer-events: none;
+  }
+  .utilityRow :global(#header-cart-preview) {
+    bottom: 110px;
+  }
+  .mobileBrand {
+    position: fixed;
+    left: 50vw;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 76px;
+    z-index: 2;
+  }
+  .mobileBrand img {
+    width: 64px;
+    height: 76px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
+}

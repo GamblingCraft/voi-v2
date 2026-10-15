@@ -1,0 +1,33 @@
+.pageSurface {
+  position: relative;
+  z-index: 2;
+  min-height: 100svh;
+  overflow: clip;
+  background: var(--color-surface);
+}
+/* Preserve document geometry and scroll position beneath the frozen viewport. */
+.pageSurface[data-menu-hidden] {
+  visibility: hidden;
+  pointer-events: none;
+}
+.pageSurface:has(.product-root) {
+  background: var(--color-cloud-background);
+}
+
+.snapshotViewport {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  transform-origin: 50% 50%;
+  border-radius: 8px;
+  box-shadow: 2rem 0 6rem rgb(0 0 0 / 56%);
+  contain: layout paint;
+}
+.snapshotViewport[data-menu-snapshot] {
+  display: block;
+}

@@ -1,0 +1,597 @@
+.voi-product-strip {
+  overflow: hidden;
+  padding-top: 22px;
+  height: 240px;
+}
+.voi-strip-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: voiMarquee 35s linear infinite;
+}
+.voi-strip-track:hover,
+.voi-strip-track:focus-within {
+  animation-play-state: paused;
+}
+.voi-strip-track > a {
+  width: clamp(162px, 18.3vw, 288px);
+  flex-shrink: 0;
+  text-align: center;
+}
+.voi-strip-track > a > div {
+  height: clamp(94px, 11.3vw, 178px);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.voi-strip-track img {
+  width: 90%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.6s;
+}
+.voi-strip-track > a:hover img {
+  transform: scale(1.07);
+}
+.voi-strip-track h2 {
+  font-family: var(--font-tt-norms-expanded), sans-serif;
+  font-size: 30px;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: 0.3s;
+}
+.voi-strip-track > a:hover h2,
+.voi-strip-track > a:focus-visible h2 {
+  opacity: 1;
+  transform: none;
+}
+@keyframes voiMarquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+html[data-site="public"] .voi-display {
+  font-family: var(--font-tt-norms-expanded), sans-serif;
+  font-size: clamp(52px, 7.6vw, 110px);
+  font-weight: 700;
+  line-height: 1.03;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+  text-wrap: initial;
+  margin: 0;
+}
+.voi-display em {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.48em;
+  vertical-align: middle;
+  letter-spacing: -0.06em;
+}
+.voi-history {
+  position: relative;
+  min-height: 1400px;
+  padding: 70px 20px 80px;
+  text-align: center;
+  overflow: hidden;
+}
+.voi-history > .voi-display,
+.voi-history > .voi-button,
+.voi-history-content {
+  position: relative;
+  z-index: 2;
+}
+.voi-history > .voi-button {
+  margin-top: 38px;
+}
+.voi-history-content {
+  max-width: 350px;
+  margin: 40px auto 0 !important;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #9ca8ad;
+}
+.voi-orbits {
+  position: absolute;
+  inset: 370px 4% 40px;
+  pointer-events: none;
+}
+.voi-orbits i {
+  position: absolute;
+  border: 1px solid #58c8ed26;
+  border-radius: 50%;
+  width: 80%;
+  height: 75%;
+  left: 10%;
+  top: 10%;
+  transform: rotate(-23deg);
+}
+.voi-orbits i:nth-child(2) {
+  transform: rotate(28deg);
+  width: 65%;
+  left: 18%;
+  height: 100%;
+  top: 0;
+}
+.voi-orbits i:nth-child(3) {
+  transform: rotate(65deg);
+  height: 85%;
+  width: 55%;
+  left: 25%;
+}
+.voi-history-photo {
+  position: absolute;
+  object-fit: cover;
+  z-index: 1;
+  max-width: 25%;
+  border-radius: 4px;
+}
+.photo-0 {
+  width: 175px;
+  height: 135px;
+  left: 3%;
+  top: 370px;
+  border: 7px solid #f3f6f5;
+  transform: rotate(-2deg);
+}
+.photo-1 {
+  width: 165px;
+  height: 235px;
+  right: 5%;
+  top: 300px;
+  border: 6px solid #e7eef0;
+  transform: rotate(1deg);
+}
+.photo-2 {
+  width: 200px;
+  height: 250px;
+  left: 24%;
+  top: 570px;
+  transform: rotate(-2deg);
+}
+.photo-3 {
+  width: 230px;
+  height: 175px;
+  right: 20%;
+  top: 700px;
+  border: 8px solid #f6f8f8;
+  transform: rotate(-4deg);
+}
+.photo-4 {
+  width: 270px;
+  height: 340px;
+  left: 41%;
+  top: 850px;
+}
+.photo-5 {
+  width: 320px;
+  height: 230px;
+  left: 13%;
+  top: 910px;
+  border: 8px solid #eef5dd;
+  transform: rotate(2deg);
+}
+.photo-6 {
+  width: 160px;
+  height: 180px;
+  right: 6%;
+  top: 960px;
+  object-fit: contain;
+}
+.photo-7 {
+  width: 180px;
+  height: 180px;
+  left: 5%;
+  bottom: 50px;
+  object-fit: contain;
+}
+.photo-8 {
+  width: 220px;
+  height: 240px;
+  right: 21%;
+  bottom: 30px;
+  object-fit: contain;
+}
+.voi-journey {
+  position: relative;
+  min-height: 1050px;
+  padding: 150px 20px 95px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  overflow: hidden;
+}
+.voi-journey-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.45);
+  transition: opacity 0.5s;
+}
+.voi-journey > *:not(.voi-journey-bg) {
+  position: relative;
+}
+.voi-journey-stages {
+  display: flex;
+  width: min(1100px, 100%);
+  justify-content: space-between;
+  gap: 20px;
+  padding: 65px 0;
+}
+.voi-journey-stages button {
+  border: 0;
+  background: transparent;
+  color: #f3f6f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+.voi-journey-stages button span {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #f3f6f555;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+.voi-journey-stages button span.active {
+  background: #f3f6f525;
+  transform: translateY(-15px);
+}
+.voi-journey-stages img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+.voi-journey-content {
+  max-width: 440px;
+}
+.voi-journey-content h3 {
+  font-family: var(--font-tt-norms-expanded), sans-serif;
+  font-size: 30px;
+}
+.voi-journey-content p {
+  font-size: 18px;
+  line-height: 1.35;
+  margin: 14px 0 30px;
+}
+.voi-magazine {
+  text-align: center;
+  padding: 65px 0 25px;
+  overflow: hidden;
+}
+.voi-photo-ribbon {
+  display: flex;
+  gap: 20px;
+  width: calc(100% + 100px);
+  transform: translateX(-50px);
+  margin-bottom: 60px;
+}
+.voi-photo-ribbon img {
+  width: calc(100% / 7 - 17px);
+  aspect-ratio: 0.7;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.voi-photo-ribbon.reverse {
+  margin: 70px 0 0;
+  transform: translateX(-80px);
+}
+.voi-magazine p {
+  font-size: 22px;
+  line-height: 1.3;
+  max-width: 500px;
+  margin: 30px auto;
+}
+.voi-paper {
+  background: #f6f8f8;
+  color: #122a38;
+}
+.voi-culture {
+  display: grid;
+  grid-template-columns: 47% 53%;
+  padding: 44px 20px 80px;
+  gap: 0;
+}
+.voi-culture-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 18%;
+  border-right: 1px solid #9ca8ad80;
+}
+.voi-culture-intro h2,
+.voi-journal > div h2 {
+  font:
+    300 clamp(42px, 4.2vw, 64px)/1 var(--font-tt-norms-expanded),
+    sans-serif;
+  letter-spacing: -0.05em;
+  text-transform: none !important;
+  font-variation-settings:
+    "SERF" 50,
+    "wght" 300;
+}
+.voi-culture-intro p {
+  font-size: 22px;
+  line-height: 1.25;
+  margin-top: 80px;
+}
+.voi-culture-items {
+  padding-left: 32px;
+}
+.voi-culture-items article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+.voi-culture-items article:last-child {
+  margin-bottom: 0;
+}
+.voi-culture-items h3 {
+  font:
+    300 clamp(30px, 3vw, 48px)/1 var(--font-tt-norms-expanded),
+    sans-serif;
+  letter-spacing: -0.045em;
+  text-transform: none !important;
+  font-variation-settings:
+    "SERF" 50,
+    "wght" 300;
+  margin: 10px 0 25px;
+}
+.voi-culture figure {
+  margin: 0;
+}
+.voi-culture figure img {
+  aspect-ratio: 1.4;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 3px;
+}
+.voi-culture figcaption {
+  font-size: 14px;
+  color: #53636e;
+  line-height: 1.25;
+  margin-top: 24px;
+}
+.voi-paper .voi-button > span {
+  background: #ffffff;
+}
+.voi-paper .voi-button > i {
+  background: #122a38;
+}
+.voi-product-cloud {
+  position: relative;
+  height: 1200px;
+  overflow: hidden;
+}
+.cloud-product {
+  position: absolute;
+  width: 13%;
+  height: 210px;
+  transition: transform 0.5s;
+  filter: drop-shadow(0 10px 8px #122a3833);
+}
+.cloud-product img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cloud-product:hover {
+  transform: rotate(0) scale(1.1) !important;
+}
+.cloud-0 {
+  left: 1%;
+  top: 10%;
+  transform: rotate(-14deg);
+}
+.cloud-1 {
+  left: 22%;
+  top: 3%;
+  transform: rotate(12deg);
+}
+.cloud-2 {
+  left: 43%;
+  top: 0;
+  transform: rotate(-8deg);
+}
+.cloud-3 {
+  left: 65%;
+  top: 5%;
+  transform: rotate(7deg);
+}
+.cloud-4 {
+  left: 85%;
+  top: 13%;
+  transform: rotate(-12deg);
+}
+.cloud-5 {
+  left: -4%;
+  top: 37%;
+}
+.cloud-6 {
+  left: 15%;
+  top: 27%;
+  transform: rotate(10deg);
+}
+.cloud-7 {
+  left: 75%;
+  top: 28%;
+  transform: rotate(-10deg);
+}
+.cloud-8 {
+  left: 91%;
+  top: 46%;
+  transform: rotate(12deg);
+}
+.cloud-9 {
+  left: 1%;
+  top: 65%;
+  transform: rotate(-8deg);
+}
+.cloud-10 {
+  left: 24%;
+  top: 70%;
+  transform: rotate(8deg);
+}
+.cloud-11 {
+  left: 43%;
+  top: 78%;
+  transform: rotate(-8deg);
+}
+.cloud-12 {
+  left: 64%;
+  top: 68%;
+  transform: rotate(10deg);
+}
+.cloud-13 {
+  left: 83%;
+  top: 78%;
+  transform: rotate(-10deg);
+}
+.cloud-14 {
+  left: 50%;
+  top: 18%;
+  transform: rotate(14deg);
+}
+.voi-cloud-content {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  width: 60%;
+  text-align: center;
+}
+.voi-cloud-content .voi-button {
+  margin-top: 35px;
+}
+.voi-journal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  padding: 55px 20px 100px;
+}
+.voi-journal > div p {
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 20px 0;
+}
+.voi-journal > a img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.voi-journal small {
+  display: block;
+  margin: 20px 0 10px;
+}
+.voi-journal h3 {
+  font:
+    400 24px/1.15 var(--font-tt-norms-expanded),
+    sans-serif;
+  text-transform: none !important;
+}
+.voi-partner {
+  background: #142315;
+  color: #eeffda;
+  position: relative;
+  min-height: 1050px;
+  text-align: center;
+  padding: 140px 20px;
+  overflow: hidden;
+}
+.voi-partner .voi-button {
+  margin: 35px auto;
+}
+.voi-partner > img {
+  position: absolute;
+  width: 22%;
+  height: 260px;
+  object-fit: cover;
+  filter: grayscale(1);
+  mix-blend-mode: luminosity;
+}
+.voi-partner > img:nth-last-child(2) {
+  left: -2%;
+  bottom: 220px;
+  transform: rotate(-4deg);
+}
+.voi-partner > img:last-child {
+  right: -2%;
+  bottom: 50px;
+  transform: rotate(5deg);
+}
+.voi-footer {
+  background: #0b1114;
+  color: #f3f6f5;
+  padding: 80px 20px 22px;
+}
+.voi-footer a {
+  text-decoration: none;
+}
+.voi-footer-top {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  align-items: center;
+  gap: 60px;
+  padding-bottom: 80px;
+}
+.voi-footer-brand {
+  font:
+    700 clamp(90px, 14vw, 220px)/1 var(--font-tt-norms-expanded),
+    sans-serif;
+}
+.voi-footer-top h2 {
+  font:
+    300 clamp(35px, 5vw, 75px)/1 var(--font-tt-norms-expanded),
+    sans-serif;
+  text-transform: none !important;
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+.voi-footer-top > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 14px;
+}
+.voi-footer-top > div > a {
+  font-size: 24px;
+}
+.voi-footer > nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 50px;
+}
+.voi-footer > nav a {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid #f3f6f533;
+  font-family: var(--font-tt-norms-expanded), sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.voi-footer > nav a:hover {
+  color: #fff;
+}
+.voi-footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding-top: 65px;
+  font-size: 12px;
+}
+.voi-footer-bottom > a:last-child {
+  margin-left: auto;
+}

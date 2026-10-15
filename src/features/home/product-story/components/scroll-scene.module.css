@@ -1,0 +1,50 @@
+.scene {
+  position: relative;
+  scroll-margin-top: var(--header-height);
+}
+.screen {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--story-paper);
+}
+.scene[data-motion="scroll"] {
+  height: var(--scene-height);
+}
+.scene[data-motion="scroll"] .screen {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+}
+.scene[data-motion="scroll"][data-frozen] .screen {
+  position: absolute;
+  top: var(--scene-offset, 0px);
+  width: 100%;
+}
+.production {
+  --story-paper: var(--color-cloud-background);
+}
+.production {
+  --scene-height: 400svh;
+}
+.ritual {
+  --scene-height: 240svh;
+  z-index: 4;
+  margin-top: 0;
+  background: var(--story-paper);
+}
+.journey {
+  --scene-height: 650svh;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ritual {
+    margin-top: 0;
+  }
+  .scene[data-motion="scroll"] {
+    height: auto;
+  }
+  .scene[data-motion="scroll"] .screen {
+    position: relative;
+    height: auto;
+  }
+}

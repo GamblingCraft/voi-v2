@@ -1,0 +1,325 @@
+.voi-about-principles {
+  padding: 0 20px 100px;
+}
+.voi-about-principles article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+  align-items: center;
+  padding: 70px 0;
+  border-top: 1px solid #d4dce1;
+}
+.voi-about-principles article:nth-child(even) > img {
+  order: 2;
+}
+.voi-about-principles img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.voi-about-principles article:last-child img {
+  object-fit: contain;
+}
+.voi-about-principles h2 {
+  font:
+    300 clamp(38px, 4.4vw, 68px)/1.05 var(--font-tt-norms-expanded),
+    sans-serif;
+  text-transform: none !important;
+  letter-spacing: -0.05em;
+  margin: 25px 0;
+}
+.voi-about-principles p {
+  max-width: 450px;
+  font-size: 21px;
+  line-height: 1.4;
+}
+.voi-about-products {
+  text-align: center;
+  padding: 50px 20px 100px;
+}
+.voi-about-products .voi-catalog-grid {
+  grid-template-columns: repeat(5, 1fr);
+  margin: 70px 0;
+}
+.voi-about-products h3 {
+  font:
+    700 26px/1.1 var(--font-tt-norms-expanded),
+    sans-serif;
+}
+.voi-about-products .voi-catalog-grid p {
+  line-height: 1.4;
+}
+.voi-journal-hero {
+  height: 100svh;
+  min-height: 650px;
+  position: relative;
+  background: #020304;
+  color: #ffffff;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 22px;
+  gap: 30px;
+}
+.voi-journal-hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55);
+}
+.voi-journal-hero-content {
+  position: relative;
+  max-width: 520px;
+  z-index: 1;
+}
+.voi-journal-hero-content small {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid;
+  border-radius: 30px;
+}
+.voi-journal-hero .voi-journal-hero-content h1 {
+  font:
+    300 44px/1 var(--font-tt-norms-expanded),
+    sans-serif;
+  text-transform: none;
+  letter-spacing: -0.04em;
+  margin: 20px 0;
+}
+.voi-journal-hero-content a {
+  font-size: 14px;
+  text-decoration: none;
+}
+.voi-journal-controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.voi-journal-controls button {
+  width: 50px;
+  height: 82px;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  background: #f6f8f8;
+  padding: 2px;
+  cursor: pointer;
+}
+.voi-journal-controls button[aria-pressed="true"] {
+  border-color: #d4ecf4;
+}
+.voi-journal-controls img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.voi-journal-controls button:first-child,
+.voi-journal-controls button:last-child {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #122a38;
+}
+.voi-journal-controls button:hover {
+  background: #d4ecf4;
+}
+@media (max-width: 800px) {
+  .voi-about-principles {
+    padding-bottom: 45px;
+  }
+  .voi-about-principles article {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 40px 0;
+  }
+  .voi-about-principles article:nth-child(even) > img {
+    order: 0;
+  }
+  .voi-about-principles img {
+    height: 340px;
+  }
+  .voi-about-principles p {
+    font-size: 18px;
+  }
+  .voi-about-products .voi-catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .voi-journal-hero {
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    padding-bottom: 30px;
+  }
+  .voi-journal-hero .voi-journal-hero-content h1 {
+    font-size: 36px;
+  }
+  .voi-journal-controls {
+    align-self: end;
+  }
+}
+.voi-nav {
+  background: none;
+  backdrop-filter: none;
+  padding: 0;
+  gap: 90px;
+}
+.voi-nav > div {
+  background: #02030488;
+  backdrop-filter: blur(16px);
+  padding: 4px 8px;
+  flex: 1;
+  justify-content: flex-start;
+}
+.voi-nav > div:first-child {
+  border-radius: 40px 0 0 40px;
+  clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%);
+  padding-right: 24px;
+}
+.voi-nav > div:last-child {
+  border-radius: 0 40px 40px 0;
+  clip-path: polygon(4% 0, 100% 0, 100% 100%, 0 100%);
+  justify-content: flex-end;
+  padding-left: 24px;
+}
+.voi-about-hero {
+  height: 110svh;
+  min-height: 850px;
+  position: relative;
+  background: #122a38;
+  color: #f3f6f5;
+  overflow: hidden;
+}
+.voi-about-title {
+  position: absolute;
+  top: 53%;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  padding: 0 20px;
+}
+.voi-about-title small {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+.voi-about-title h1 {
+  font-size: clamp(52px, 7vw, 110px);
+}
+.voi-about-triangle {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      60deg,
+      transparent 49.96%,
+      #f3f6f525 50%,
+      transparent 50.04%
+    ),
+    linear-gradient(
+      -60deg,
+      transparent 49.96%,
+      #f3f6f525 50%,
+      transparent 50.04%
+    );
+  opacity: 0.5;
+}
+.about-image {
+  position: absolute;
+  object-fit: cover;
+  width: 15%;
+  height: 17%;
+  border-radius: 0;
+}
+.about-image-0 {
+  left: 5.4%;
+  top: 22%;
+}
+.about-image-1 {
+  right: 4.5%;
+  top: 15%;
+  width: 17%;
+  object-fit: contain;
+}
+.about-image-2 {
+  left: 20.5%;
+  top: 49%;
+  width: 18%;
+}
+.about-image-3 {
+  right: 20%;
+  top: 44%;
+  width: 12.5%;
+  height: 24%;
+}
+.about-image-4 {
+  left: 2.4%;
+  bottom: 0;
+  width: 12%;
+}
+.about-image-5 {
+  right: 4.5%;
+  bottom: 3%;
+  width: 12.5%;
+  height: 12%;
+}
+.voi-introduction > .voi-button {
+  margin-top: 30px;
+}
+@media (max-width: 1150px) and (min-width: 801px) {
+  .voi-nav {
+    gap: 65px;
+  }
+  .voi-nav > div {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .voi-nav > div:first-child {
+    padding-right: 15px;
+  }
+  .voi-nav > div:last-child {
+    padding-left: 15px;
+  }
+}
+@media (max-width: 800px) {
+  .voi-about-hero {
+    height: 100svh;
+    min-height: 760px;
+  }
+  .voi-about-title {
+    top: 48%;
+  }
+  .voi-about-title small {
+    margin-bottom: 25px;
+  }
+  .about-image-0 {
+    top: 20%;
+    width: 24%;
+    height: 17%;
+  }
+  .about-image-1 {
+    top: 18%;
+    width: 27%;
+  }
+  .about-image-2 {
+    left: 3%;
+    top: 40%;
+    width: 23%;
+    height: 14%;
+    opacity: 0.65;
+  }
+  .about-image-3 {
+    right: 3%;
+    top: 37%;
+    width: 22%;
+    height: 18%;
+    opacity: 0.65;
+  }
+  .about-image-4,
+  .about-image-5 {
+    width: 25%;
+    height: 13%;
+  }
+}

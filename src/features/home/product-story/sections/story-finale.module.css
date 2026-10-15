@@ -1,0 +1,55 @@
+.section {
+  position: relative;
+  height: 100svh;
+  min-height: 650px;
+  overflow: hidden;
+  background: var(--story-paper);
+}
+.title {
+  position: absolute;
+  z-index: 2;
+  top: 13%;
+  left: 4%;
+}
+.title em {
+  margin-top: 16px;
+  margin-left: 2vw;
+  font-size: 4.4vw;
+}
+.city {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  --media-tint: #d0dce0;
+}
+.city::before,
+.city::after {
+  content: none;
+}
+.note {
+  position: absolute;
+  z-index: 2;
+  bottom: 17%;
+  left: 4%;
+  width: min(80%, 34rem);
+  color: var(--story-muted);
+}
+@media (max-width: 43.75rem) {
+  .section {
+    min-height: 600px;
+  }
+  .title {
+    top: 18%;
+    left: 6%;
+    --story-heading-size: 14vw;
+  }
+  .title em {
+    font-size: 9vw;
+  }
+  .note {
+    bottom: 45%;
+    left: 6%;
+    font-size: var(--type-body-size);
+  }
+}

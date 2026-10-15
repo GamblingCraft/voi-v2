@@ -1,0 +1,28 @@
+.inquirySection {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 8vw;
+  background: var(--color-cloud-background);
+  padding: var(--section-space, 96px) var(--page-gutter);
+  border-block: 1px solid var(--line, #d4dce1);
+}
+.inquirySection h2 {
+  font-size: var(--type-section-title-size);
+  margin: 0 0 24px;
+}
+.inquirySection > div > p:last-child {
+  max-width: 38ch;
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-leading);
+  color: var(--muted);
+}
+@media (max-width: 800px) {
+  .inquirySection {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding: 64px var(--page-gutter);
+  }
+  .inquirySection h2 {
+    font-size: var(--type-section-title-size);
+  }
+}

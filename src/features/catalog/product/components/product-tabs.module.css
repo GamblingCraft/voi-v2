@@ -1,0 +1,48 @@
+.sections {
+  margin-top: 12px;
+}
+.tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #cbd7df;
+  margin-bottom: 36px;
+}
+.tabs button {
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: #53636e;
+  min-height: 52px;
+  padding: 12px 24px;
+  font:
+    400 18px/1.4 var(--font-editorial),
+    sans-serif;
+  cursor: pointer;
+}
+.tabs button[aria-selected="true"] {
+  color: #122a38;
+  border-bottom-color: #122a38;
+}
+.tabs button:focus-visible,
+.panel:focus-visible {
+  outline: 2px solid #2980a6;
+  outline-offset: 3px;
+}
+.panel {
+  min-height: 280px;
+}
+.panel > h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+@media (max-width: 600px) {
+  .tabs {
+    gap: 0;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+  .tabs button {
+    padding: 12px 10px;
+    font-size: 16px;
+  }
+}

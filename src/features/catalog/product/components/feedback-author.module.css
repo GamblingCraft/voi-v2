@@ -1,0 +1,33 @@
+.author {
+  font-size: 15px;
+  font-weight: 400;
+}
+.authorRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #d3e0e7;
+  color: #254556;
+  font-size: 18px;
+  font-weight: 400;
+}
+.adminAvatar {
+  background: #153749;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+.authorRole {
+  display: block;
+  margin-top: 3px;
+  color: #53636e;
+  font-size: 12px;
+}

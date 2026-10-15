@@ -1,0 +1,63 @@
+.share {
+  position: relative;
+  max-width: 100%;
+}
+.button {
+  display: grid;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 10px 20px;
+  border: 1px solid currentColor;
+  border-radius: var(--button-radius);
+  background: transparent;
+  color: var(--ink, #122a38);
+  font:
+    400 14px/1.4 var(--font-body),
+    sans-serif;
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+.button:hover,
+.button[data-copied] {
+  background: var(--ink, #122a38);
+  color: #ffffff;
+  border-color: var(--ink, #122a38);
+}
+.label {
+  grid-area: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+.label[data-visible="true"] {
+  opacity: 1;
+}
+.label svg {
+  flex-shrink: 0;
+}
+.announcement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.error {
+  display: block;
+  margin-top: 8px;
+  max-width: 32ch;
+  font-size: 14px;
+  line-height: 1.4;
+}
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .label {
+    transition: none;
+  }
+}

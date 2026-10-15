@@ -1,0 +1,83 @@
+/* Hero: one headline and the new product description. Keep animation targets inert. */
+.product #hero .hero-description {
+  text-transform: none;
+  line-height: 1.45;
+  font-size: clamp(14px, 1.3vw, 20px);
+  width: min(760px, 80vw);
+}
+
+/* Place the intro action exactly 100px beneath the rendered logo. */
+.product #zip-story #heading-ice {
+  background: url("/media/products/cube.png") center/contain no-repeat !important;
+}
+
+/* Editorial cleanup and a transparent cube sized to the heading's capitals. */
+.product #eco {
+  display: none !important;
+}
+.product #zip-story #heading-ice {
+  display: inline-block !important;
+  opacity: 1 !important;
+  visibility: inherit;
+  width: 1em !important;
+  height: 1em !important;
+  font-size: inherit !important;
+  margin: 0 0.12em !important;
+  border-radius: 0;
+  vertical-align: -0.08em;
+  background-size: contain !important;
+}
+.product,
+.product *:not(h1, h1 *, h2, h2 *, h3, h3 *) {
+  font-family: var(--font-body), sans-serif !important;
+}
+.product p,
+.product p .line,
+.product p .linein,
+.product #hero .hero-description,
+.product #hero .hero-description * {
+  line-height: 1.5 !important;
+}
+.product #closing-story .voi-catalog-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 180px;
+  height: auto;
+  margin: 60px auto 0;
+  padding: var(--button-padding);
+  border: 1px solid #ffffff;
+  border-radius: var(--button-radius);
+  color: #ffffff;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  text-decoration: none;
+  overflow: visible;
+  animation: none;
+  transform: none;
+  transition:
+    background 0.2s,
+    color 0.2s;
+
+  text-align: center;
+  font-family: var(--font-body), sans-serif;
+}
+.product #closing-story .voi-catalog-button:hover {
+  background: #ffffff;
+  color: #122a38;
+}
+.product #closing-story .voi-catalog-button:focus-visible {
+  outline-color: #ffffff;
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) {
+  .product #closing-story .voi-catalog-button {
+    margin-top: 36px;
+    min-width: 150px;
+    padding: 15px 28px;
+  }
+}

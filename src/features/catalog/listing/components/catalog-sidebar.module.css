@@ -1,0 +1,28 @@
+.sidebar {
+  min-width: 0;
+}
+.sidebarHelp {
+  border-top: 1px solid var(--line);
+  margin-top: 28px;
+  padding-top: 24px;
+}
+.sidebarHelp h3 {
+  font-size: 24px;
+}
+.sidebarHelp p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.sidebarHelp a {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border-bottom: 1px solid var(--ink);
+}
+@media (max-width: 900px) {
+  .sidebarHelp {
+    display: none;
+  }
+}

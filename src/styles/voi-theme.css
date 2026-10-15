@@ -1,0 +1,1031 @@
+/* VOI identity: values and TT Norms Expanded from the original voi project. */
+html[data-site="public"] {
+  --font-body: var(--font-tt-norms-expanded);
+  --font-display: var(--font-tt-norms-expanded);
+  --font-ui: var(--font-tt-norms-expanded);
+  --font-editorial: var(--font-tt-norms-expanded);
+  --font-story-display: var(--font-tt-norms-expanded);
+  --color-background: #020304;
+  --color-surface: #0b1114;
+  --color-text: #f3f6f5;
+  --color-text-muted: #9ca8ad;
+  --color-accent: #58c8ed;
+  --color-cloud-background: #f6f8f8;
+  --type-page-title-size: clamp(32px, 4.4vw, 64px);
+  --type-section-title-size: clamp(28px, 3.2vw, 48px);
+  --type-card-title-size: clamp(22px, 2vw, 28px);
+  --type-heading-leading: 1.1;
+  --type-heading-tracking: -0.035em;
+  --type-body-size: clamp(16px, 1.25vw, 18px);
+  --type-body-leading: 1.5;
+  --type-action-weight: 600;
+  --page-gutter: clamp(20px, 3vw, 48px);
+  --button-ink: #111;
+  --button-paper: #fff;
+}
+html[data-site="public"] body {
+  font-family: var(--font-body), sans-serif;
+  font-variation-settings: normal;
+  font-size: 16px;
+  line-height: 1.5;
+}
+html[data-site="public"] :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  font-variation-settings: normal;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+html[data-site="public"] :is(button, input, textarea, select) {
+  font-family: var(--font-body), sans-serif;
+}
+html[data-site="public"] .voi-display {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 400;
+  font-size: clamp(32px, 5vw, 72px);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+html[data-site="public"] .voi-display em {
+  font: inherit;
+  font-size: 0.72em;
+  letter-spacing: inherit;
+  vertical-align: baseline;
+  color: inherit;
+}
+html[data-site="public"] .home-page .voi-hero :is(h1, .voi-slide-title) {
+  font:
+    400 clamp(36px, 4.8vw, 70px)/1.1 var(--font-display),
+    sans-serif;
+  letter-spacing: -0.045em;
+  text-transform: none;
+}
+.voi-hero-content-stack {
+  max-width: calc(100% - 426px);
+}
+.voi-hero-content {
+  gap: 26px;
+}
+.voi-header,
+.voi-nav {
+  font-family: var(--font-ui), sans-serif;
+}
+.voi-nav a {
+  font-size: 11px;
+  padding: 12px 9px;
+  letter-spacing: -0.02em;
+}
+.voi-logo {
+  filter: none;
+}
+.voi-logo img,
+.voi-footer-mark img {
+  filter: brightness(0) invert(1) !important;
+}
+.voi-header-tools,
+.voi-sound,
+.voi-nav > div {
+  background: #020304c9;
+}
+.voi-header a:focus-visible,
+.voi-header button:focus-visible {
+  outline: 2px solid #58c8ed;
+  outline-offset: 4px;
+}
+.voi-button {
+  font:
+    400 14px/1.3 var(--font-body),
+    sans-serif !important;
+  height: 56px;
+  color: #122a38;
+}
+.voi-button > span {
+  background: #fff;
+  min-height: 56px;
+  padding: 0 24px;
+}
+.voi-button > i {
+  background: #58c8ed;
+  color: #020304;
+  height: 56px;
+}
+.voi-button:hover > span {
+  background: #d4ecf4;
+}
+.voi-button:hover > i {
+  background: #91dff6;
+}
+.voi-paper .voi-button > span,
+.voi-magazine > .voi-button > span {
+  background: #122a38;
+  color: #fff;
+}
+.voi-paper .voi-button > i {
+  background: #58c8ed;
+  color: #122a38;
+}
+.voi-highlights {
+  color: #f3f6f5;
+}
+.voi-highlights > a {
+  background: transparent;
+  border: 0;
+}
+.voi-highlights p {
+  color: #acbcc3;
+  line-height: 1.4;
+}
+.voi-thumbs button > span {
+  font-size: 12px;
+  line-height: 1.25;
+  max-width: 130px;
+}
+.voi-history {
+  background: #020304;
+  padding-top: clamp(80px, 8vw, 132px);
+}
+.voi-history > h2 {
+  max-width: 1000px;
+  margin: 0 auto !important;
+}
+.voi-history-content {
+  font-size: 16px;
+  line-height: 1.55;
+  color: #9ca8ad;
+  max-width: 360px;
+}
+.voi-photo-composition circle {
+  stroke: #58c8ed;
+}
+.voi-photo-composition .item img {
+  border-radius: 6px;
+}
+.voi-strip-track h2 {
+  font:
+    400 clamp(18px, 1.6vw, 24px)/1.25 var(--font-body),
+    sans-serif;
+  min-height: 60px;
+}
+.voi-magazine {
+  background: #f6f8f8;
+  color: #122a38;
+  padding: 32px 0;
+}
+.voi-magazine p {
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.5;
+  max-width: 540px;
+  padding: 0 20px;
+  margin: 24px auto !important;
+}
+.voi-paper {
+  background: #f6f8f8;
+  color: #122a38;
+}
+.voi-culture {
+  padding: clamp(64px, 7vw, 110px) var(--page-gutter);
+}
+.voi-culture-intro {
+  border-color: #c6d7e0;
+  padding-right: 12%;
+}
+.voi-culture-intro h2,
+.voi-journal > div h2 {
+  font:
+    400 clamp(32px, 4vw, 56px)/1.12 var(--font-display),
+    sans-serif;
+  letter-spacing: -0.035em;
+}
+.voi-culture-intro p {
+  font-size: 18px;
+  line-height: 1.55;
+  max-width: 32ch;
+}
+.voi-culture-items {
+  padding-left: clamp(24px, 3vw, 48px);
+}
+.voi-culture-items h3 {
+  font:
+    400 clamp(23px, 2.2vw, 32px)/1.15 var(--font-display),
+    sans-serif;
+  letter-spacing: -0.03em;
+}
+.voi-culture figcaption {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #53636e;
+}
+.voi-journal {
+  padding: 80px var(--page-gutter);
+}
+.voi-journal h3 {
+  font:
+    400 clamp(20px, 1.8vw, 26px)/1.25 var(--font-display),
+    sans-serif;
+  letter-spacing: -0.025em;
+}
+.voi-journal p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.voi-partner {
+  background: #0b1114;
+  color: #f3f6f5;
+  min-height: 800px;
+  padding: 120px var(--page-gutter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.voi-partner h2 {
+  max-width: 850px;
+  position: relative;
+  z-index: 1;
+}
+.voi-partner .voi-button {
+  position: relative;
+  z-index: 2;
+}
+.voi-partner > img {
+  opacity: 0.4;
+  width: 20%;
+}
+.voi-footer-scene {
+  background: #fff;
+  color: #f3f6f5;
+}
+.voi-footer-panel {
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+/* Footer: only the separate background layer filters the backdrop. */
+.voi-footer-glass {
+  position: absolute;
+  inset: 0;
+  display: block;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: rgb(20 14 7 / 40%);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+.voi-footer-panel > :not(.voi-footer-glass) {
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 2000px) {
+  .voi-footer-panel {
+    border-radius: 0.34vw;
+  }
+}
+.voi-footer-panel :is(h3, small),
+.voi-footer-legal {
+  font-family: var(--font-body), sans-serif;
+  letter-spacing: 0;
+}
+.voi-footer-panel nav h3,
+.voi-footer-contact small {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+.voi-footer-panel nav a {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.voi-footer-mainlinks a {
+  font-size: 18px !important;
+}
+.voi-footer-contact > a {
+  font-size: clamp(18px, 1.6vw, 26px);
+  white-space: nowrap;
+}
+.voi-footer-caption {
+  top: 20%;
+}
+.voi-footer-caption small {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+.voi-footer-caption h2 {
+  font-size: clamp(32px, 5vw, 68px) !important;
+}
+.voi-editorial-hero .voi-display {
+  font-size: clamp(36px, 5.4vw, 80px);
+  line-height: 1.12;
+  max-width: 1150px;
+}
+.voi-introduction {
+  padding: clamp(64px, 8vw, 128px) var(--page-gutter);
+}
+.voi-introduction h2 {
+  font-size: clamp(30px, 4vw, 58px);
+  line-height: 1.15;
+}
+.voi-introduction p {
+  font-size: clamp(16px, 1.6vw, 22px);
+  line-height: 1.55;
+  max-width: 760px;
+}
+.voi-about-hero {
+  background: #020304;
+  min-height: 850px;
+}
+.voi-about-title {
+  top: 48%;
+  padding: 0 var(--page-gutter);
+}
+.voi-about-title h1 {
+  font-size: clamp(36px, 5vw, 72px) !important;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.1;
+}
+.voi-about-title small {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+.voi-about-triangle {
+  background: url("/brand/water-ornament.svg") repeat-x center/240px 96px;
+  opacity: 0.2;
+}
+.voi-about-principles h2 {
+  font-size: clamp(28px, 3.2vw, 48px);
+  line-height: 1.15;
+}
+.voi-about-principles p {
+  font-size: 18px;
+  line-height: 1.55;
+}
+.voi-catalog-grid h3 {
+  font-size: 22px;
+  line-height: 1.2;
+}
+.voi-catalog-grid p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* Reserve image space independently of the intrinsic PNG dimensions. */
+.voi-about-products .voi-catalog-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.voi-about-products .voi-catalog-grid > a {
+  min-width: 0;
+}
+.voi-about-products .voi-catalog-grid .voi-product-form-image {
+  position: relative;
+  display: block;
+  height: clamp(190px, 18vw, 300px);
+  margin-bottom: 28px;
+}
+.voi-about-products .voi-product-form-image img {
+  position: absolute;
+  inset: 16px;
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+}
+.voi-about-products .voi-catalog-grid h3 {
+  margin: 0 0 16px;
+}
+@media (max-width: 1100px) {
+  .voi-about-products .voi-catalog-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 743px) {
+  .voi-about-products .voi-catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .voi-about-products .voi-catalog-grid .voi-product-form-image {
+    height: clamp(150px, 38vw, 240px);
+    margin-bottom: 24px;
+  }
+  .voi-about-products .voi-catalog-grid h3 {
+    font-size: clamp(16px, 3.5vw, 22px);
+  }
+}
+.voi-journal-hero h1 {
+  font:
+    400 clamp(36px, 4.8vw, 70px)/1.12 var(--font-display),
+    sans-serif;
+  letter-spacing: -0.035em;
+}
+.voi-water-journey {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #0b1114;
+  color: #f3f6f5;
+  padding: clamp(80px, 8vw, 128px) var(--page-gutter);
+}
+.voi-ornament {
+  height: 64px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: url("/brand/water-ornament.svg") repeat-x center/160px 64px;
+  opacity: 0.22;
+  pointer-events: none;
+}
+.voi-water-journey header {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.voi-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  color: #9ca8ad;
+}
+.voi-water-journey h2 {
+  font-size: clamp(36px, 5vw, 72px);
+  margin: 20px 0 24px;
+  line-height: 1.1;
+}
+.voi-water-journey h2 span {
+  color: #58c8ed;
+}
+.voi-water-journey header p {
+  color: #acbcc3;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.voi-water-stages {
+  max-width: 1400px;
+  margin: 72px auto 48px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+}
+.voi-water-connector {
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  height: 240px;
+  pointer-events: none;
+  z-index: -1;
+}
+.voi-water-route {
+  stroke: #58c8ed;
+  stroke-width: 1;
+  opacity: 0.32;
+}
+.voi-water-particle {
+  fill: #58c8ed;
+}
+.voi-water-step {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 0;
+}
+.voi-water-index {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #9ca8ad;
+}
+.voi-water-symbol {
+  width: 160px;
+  height: 160px;
+  margin: 24px auto;
+  color: #d4ecf4;
+  transition:
+    color 0.3s,
+    transform 0.5s;
+}
+.voi-water-step:hover .voi-water-symbol {
+  color: #58c8ed;
+  transform: translateY(-6px);
+}
+.voi-water-step h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: clamp(19px, 1.8vw, 26px);
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+.voi-water-step h3 span {
+  font-size: 20px;
+  color: #58c8ed;
+}
+.voi-water-step p {
+  max-width: 28ch;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #acbcc3;
+}
+.voi-water-cta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: fit-content;
+  margin: 0 auto;
+  border: 1px solid #6c848e;
+  border-radius: 999px;
+  min-height: 56px;
+  padding: 16px 28px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.25s;
+}
+.voi-water-cta:hover {
+  background: #173443;
+}
+@media (max-width: 1100px) {
+  .voi-culture {
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+  .voi-culture-intro {
+    border: 0;
+    padding: 0;
+  }
+  .voi-culture-intro p {
+    margin-top: 28px;
+  }
+  .voi-culture-items {
+    padding: 0;
+  }
+  .voi-water-stages {
+    gap: 22px;
+  }
+  .voi-water-step h3 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1000px) {
+  .voi-highlights {
+    display: none;
+  }
+  .voi-hero-content-stack {
+    max-width: 100%;
+  }
+  .voi-hero-content {
+    max-width: 680px;
+  }
+  .home-page .voi-hero-top {
+    padding: 20px var(--page-gutter) 0;
+  }
+}
+@media (max-width: 743px) {
+  html[data-site="public"] .voi-display {
+    font-size: clamp(30px, 7.8vw, 50px);
+    line-height: 1.14;
+    letter-spacing: -0.035em;
+  }
+  html[data-site="public"] .home-page .voi-hero :is(h1, .voi-slide-title) {
+    font-size: clamp(32px, 8vw, 48px);
+    line-height: 1.12;
+  }
+  .voi-button {
+    font-size: 12px !important;
+  }
+  .voi-button > span {
+    padding: 0 20px;
+  }
+  .voi-hero-content {
+    gap: 22px;
+  }
+  .voi-history-content {
+    padding: 0 12px;
+    font-size: 15px;
+  }
+  .voi-history {
+    padding: 72px 20px 48px;
+  }
+  .voi-magazine {
+    padding: 24px 0;
+  }
+  .voi-culture {
+    padding: 64px 20px;
+  }
+  .voi-culture-items article {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .voi-culture-items h3 {
+    font-size: 28px;
+  }
+  .voi-culture-intro p {
+    font-size: 16px;
+  }
+  .voi-product-orbit {
+    height: 780px;
+    max-height: 100svh;
+  }
+  .voi-cloud-content {
+    width: 90%;
+  }
+  .voi-partner {
+    min-height: 650px;
+    padding: 88px 20px;
+  }
+  .voi-partner > img {
+    width: 30%;
+    height: 160px;
+    opacity: 0.22;
+  }
+  .voi-journal {
+    padding: 64px 20px;
+  }
+  .voi-about-hero {
+    height: 90svh;
+    min-height: 700px;
+  }
+  .voi-about-title {
+    top: 44%;
+  }
+  .voi-about-title h1 {
+    font-size: clamp(30px, 8vw, 48px) !important;
+  }
+  .voi-footer-caption {
+    top: 14%;
+  }
+  .voi-footer-panel {
+    gap: 32px 24px;
+  }
+  .voi-footer-contact > a {
+    font-size: 20px;
+  }
+  .voi-water-journey {
+    padding: 80px 20px 64px;
+  }
+  .voi-water-journey h2 {
+    font-size: 36px;
+  }
+  .voi-water-journey header p {
+    font-size: 16px;
+  }
+  .voi-water-stages {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 40px auto;
+  }
+  .voi-water-connector {
+    display: none;
+  }
+  .voi-water-symbol {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+  }
+  .voi-water-step h3 {
+    font-size: 17px;
+    gap: 6px;
+  }
+  .voi-water-step p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 480px) {
+  .voi-water-stages {
+    display: block;
+    border-left: 1px solid #58c8ed40;
+    margin-left: 10px;
+    padding-left: 20px;
+  }
+  .voi-water-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 86px minmax(0, 1fr);
+    column-gap: 16px;
+    text-align: left;
+    align-items: start;
+    padding: 24px 0;
+  }
+  .voi-water-step:before {
+    content: "";
+    position: absolute;
+    top: 31px;
+    left: -25px;
+    width: 9px;
+    height: 9px;
+    border: 1px solid #58c8ed;
+    background: #0b1114;
+    transform: rotate(45deg);
+  }
+  .voi-water-index {
+    grid-column: 2;
+    font-size: 10px;
+  }
+  .voi-water-symbol {
+    grid-column: 1;
+    grid-row: 1/4;
+    width: 86px;
+    height: 100px;
+    margin: 0;
+  }
+  .voi-water-step h3 {
+    grid-column: 2;
+    font-size: 18px;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  .voi-water-step p {
+    grid-column: 2;
+    max-width: none;
+  }
+  .voi-water-cta {
+    font-size: 12px;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .voi-water-particle {
+    display: none;
+  }
+  .voi-water-symbol {
+    transition: none;
+  }
+  .voi-water-step:hover .voi-water-symbol {
+    transform: none;
+  }
+}
+.voi-header[data-surface="light"] .voi-logo img {
+  filter: brightness(0) !important;
+}
+.voi-about-title {
+  top: 43%;
+}
+.voi-about-title h1 {
+  max-width: 75%;
+  font-size: clamp(36px, 4.1vw, 60px) !important;
+}
+.about-image-2 {
+  left: 1%;
+  top: 49%;
+  width: 15%;
+  height: 20%;
+  opacity: 0.6;
+}
+.about-image-3 {
+  right: 1%;
+  top: 43%;
+  width: 12%;
+  height: 24%;
+  opacity: 0.6;
+}
+.voi-about-triangle {
+  background-position: center 35%;
+  opacity: 0.13;
+}
+@media (max-width: 743px) {
+  .voi-about-title {
+    top: 38%;
+  }
+  .voi-about-title h1 {
+    max-width: 100%;
+    font-size: clamp(30px, 7.8vw, 48px) !important;
+  }
+  .about-image-2 {
+    top: auto;
+    bottom: 7%;
+    width: 26%;
+    height: 18%;
+    left: 4%;
+    opacity: 0.8;
+  }
+  .about-image-3 {
+    top: auto;
+    bottom: 4%;
+    width: 22%;
+    height: 18%;
+    right: 6%;
+    opacity: 0.8;
+  }
+  .about-image-4,
+  .about-image-5 {
+    display: none;
+  }
+}
+html[data-site="public"] .voi-about-title h1 {
+  margin-inline: auto;
+}
+
+/* Footer: a full-screen sticky prelude followed by the rising panel. */
+.voi-footer-scene {
+  height: auto;
+  min-height: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: clip;
+  isolation: isolate;
+}
+.voi-footer-prelude {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  flex: none;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #fff;
+}
+.voi-footer-prelude .voi-footer-background {
+  z-index: 0;
+}
+.voi-footer-prelude .voi-footer-caption {
+  position: relative;
+  top: auto;
+  left: auto;
+  z-index: 1;
+  width: 100%;
+  padding: 40px 24px;
+  text-align: center;
+}
+.voi-footer-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 22px 22px;
+  overflow: hidden;
+}
+.voi-footer-panel {
+  z-index: 1;
+}
+.voi-footer-legal {
+  position: relative;
+}
+@media (max-width: 800px) {
+  .voi-footer-wrapper {
+    padding: 0 16px 20px;
+  }
+}
+@media (max-width: 800px) {
+  .voi-footer-contact {
+    grid-column: 1/-1;
+  }
+  .voi-footer-contact > a {
+    white-space: normal;
+  }
+}
+.voi-header-phone {
+  font:
+    400 12px/1.4 var(--font-ui),
+    sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  color: inherit;
+  text-shadow: 0 1px 8px #0004;
+}
+.voi-header[data-surface="light"] .voi-header-phone {
+  color: #122a38;
+  text-shadow: none;
+}
+.voi-header-tools {
+  margin-left: auto;
+  gap: 3px;
+}
+@media (max-width: 700px) {
+  .voi-header {
+    left: 12px;
+    right: 12px;
+    top: 18px;
+    height: auto;
+    align-items: flex-start;
+  }
+  .voi-header-phone {
+    font-size: 10px;
+    max-width: 110px;
+    padding-top: 12px;
+  }
+  .voi-header-tools {
+    margin-top: 62px;
+    min-height: 42px;
+    padding: 0 5px;
+    gap: 0;
+  }
+  .voi-header .voi-logo {
+    top: 0;
+  }
+}
+@media (max-width: 700px) {
+  .voi-header-tools {
+    position: absolute;
+    right: 0;
+    top: 62px;
+    margin-top: 0;
+  }
+}
+
+.voi-header .voi-header-phone {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font:
+    400 16px/1.4 var(--font-ui),
+    sans-serif;
+  max-width: none;
+  padding-top: 0;
+}
+@media (max-width: 700px) {
+  .voi-header .voi-header-phone {
+    font-size: 12px;
+  }
+}
+
+/* Slightly larger navigation, shared by both VOI versions. */
+.voi-header {
+  height: 52px;
+}
+.voi-header-tools {
+  min-height: 52px;
+  padding: 0 10px;
+  gap: 5px;
+}
+.voi-header-tools svg {
+  width: 20px;
+  height: 20px;
+}
+.voi-header .voi-menu-trigger {
+  font-size: 13px !important;
+  padding: 14px 10px;
+}
+.voi-header .voi-header-phone {
+  font-size: 18px;
+}
+@media (max-width: 700px) {
+  .voi-header {
+    height: auto;
+  }
+  .voi-header-tools {
+    min-height: 48px;
+    padding: 0 7px;
+    gap: 2px;
+  }
+  .voi-header .voi-header-phone {
+    font-size: 13px;
+  }
+  .voi-header .voi-menu-trigger {
+    font-size: 12px !important;
+    padding: 12px 7px;
+  }
+}
+
+.voi-header {
+  left: clamp(24px, 3vw, 56px);
+  right: clamp(24px, 3vw, 56px);
+}
+@media (max-width: 700px) {
+  .voi-header {
+    left: 20px;
+    right: 20px;
+  }
+}
+
+.voi-header-desktop-tools {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+@media (max-width: 767px) {
+  .voi-header .voi-header-phone,
+  .voi-header .voi-header-desktop-tools {
+    display: none;
+  }
+  .voi-header {
+    top: 18px;
+    height: 48px;
+    align-items: center;
+  }
+  .voi-header .voi-header-tools {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 0;
+  }
+  .voi-header .voi-logo {
+    top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .voi-header .voi-logo {
+    display: none;
+  }
+}

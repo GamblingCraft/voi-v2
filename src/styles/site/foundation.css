@@ -1,0 +1,32 @@
+html[data-site="public"] {
+  --font-body: var(--font-tt-norms-expanded), sans-serif;
+  --font-display: var(--font-tt-norms-expanded), sans-serif;
+  --font-ui: var(--font-tt-norms-expanded), sans-serif;
+  --font-editorial: var(--font-tt-norms-expanded), sans-serif;
+  --font-story-display: var(--font-tt-norms-expanded), sans-serif;
+  --color-background: #020304;
+  --color-surface: #020304;
+  --color-text: #f3f6f5;
+  --color-text-muted: #9ca8ad;
+  --color-accent: #d4ecf4;
+  --color-cloud-background: #f6f8f8;
+  --page-gutter: 20px;
+  --type-body-size: 16px;
+  --type-action-weight: 500;
+  --button-ink: #122a38;
+  --button-paper: #f6f8f8;
+  --type-heading-tracking: -0.045em;
+  --type-page-title-size: clamp(60px, 7.6vw, 110px);
+  --type-section-title-size: clamp(38px, 4vw, 60px);
+  --type-heading-leading: 1.04;
+}
+html[data-site="public"] body {
+  font-family: var(--font-tt-norms-expanded), sans-serif;
+  font-variation-settings:
+    "SERF" 0,
+    "wght" 400;
+  scrollbar-color: #9ca8ad #020304;
+}
+html[data-site="public"] :is(h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: normal;
+}

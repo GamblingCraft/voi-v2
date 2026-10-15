@@ -1,0 +1,136 @@
+.page {
+  --catalog-bottom-spacing: 64px;
+}
+.heading {
+  padding: 26px 0 36px;
+}
+.heading h1 {
+  font-size: var(--type-page-title-size);
+  line-height: 1.2;
+}
+.heading h1 span {
+  display: block;
+  font-size: clamp(18px, 2vw, 28px);
+  line-height: 1.4;
+  letter-spacing: 0.015em;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.selection {
+  margin-top: 48px;
+}
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.sectionHeading h2 {
+  font-size: var(--type-section-title-size);
+}
+.shopGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.photoCard {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+  color: #fff;
+  min-height: 380px;
+}
+.background {
+  object-fit: cover;
+  z-index: -2;
+}
+.photoCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 52%);
+  z-index: -1;
+}
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  padding: clamp(24px, 3vw, 40px);
+}
+.cardContent h2 {
+  font-size: var(--type-section-title-size);
+}
+.cardContent h3 {
+  font-size: clamp(28px, 2.6vw, 38px);
+}
+.cardContent p {
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-leading);
+  max-width: 38ch;
+  margin: 20px 0 36px;
+}
+.cardContent a {
+  margin-top: auto;
+}
+.editorial {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+@media (min-width: 1500px) {
+  .shopGrid {
+    grid-template-columns: repeat(3, minmax(0, 300px)) minmax(0, 1fr);
+  }
+}
+@media (max-width: 1100px) {
+  .shopGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .guide {
+    grid-column: 1 / -1;
+    min-height: 320px;
+  }
+}
+@media (max-width: 800px) {
+  .shopGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .editorial {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 580px) {
+  .heading {
+    padding: 20px 0 28px;
+  }
+  .selection {
+    margin-top: 32px;
+  }
+  .sectionHeading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .shopGrid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    gap: 14px;
+    padding: 4px 4px 16px;
+  }
+  .shopGrid > * {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+  }
+  .guide {
+    min-height: 400px;
+  }
+  .editorial {
+    margin-top: 32px;
+  }
+}

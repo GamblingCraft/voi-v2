@@ -1,0 +1,126 @@
+.voi-header {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  top: 30px;
+  height: 46px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  pointer-events: none;
+}
+.voi-header a,
+.voi-header button {
+  pointer-events: auto;
+}
+.voi-nav {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  height: 46px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  background: #02030488;
+  backdrop-filter: blur(16px);
+  padding: 4px 8px;
+  font-family: var(--font-tt-norms-expanded), sans-serif;
+}
+.voi-nav > div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.voi-nav a {
+  font-size: 12px;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 11px;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  transition: background 0.25s;
+}
+.voi-nav a:hover,
+.voi-nav a[aria-current="page"] {
+  background: #f3f6f520;
+  border-color: #f3f6f565;
+}
+.voi-logo {
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+  width: 84px;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 2px 8px #0004);
+}
+.voi-logo img {
+  width: 80px;
+  height: 64px;
+  object-fit: contain;
+}
+.voi-sound,
+.voi-header-tools {
+  border-radius: 40px;
+  background: #02030488;
+  backdrop-filter: blur(16px);
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+.voi-sound {
+  width: 64px;
+}
+.voi-sound button {
+  color: #ffffff !important;
+  background: none !important;
+  border: 0 !important;
+}
+.voi-header-tools {
+  gap: 0;
+  padding: 0 8px;
+}
+.voi-header-tools > button {
+  color: #ffffff !important;
+  border: 0 !important;
+  background: transparent !important;
+  width: auto;
+  min-width: 32px;
+}
+.voi-menu-trigger {
+  font:
+    700 12px var(--font-tt-norms-expanded),
+    sans-serif !important;
+  text-transform: uppercase;
+  padding: 12px 8px;
+  cursor: pointer;
+}
+.voi-header-tools svg {
+  width: 17px;
+  height: 17px;
+}
+.home-page {
+  background: #020304;
+  color: #f3f6f5;
+}
+.home-page h1,
+.home-page h2,
+.home-page h3,
+.home-page p {
+  margin: 0;
+}
+.home-page a {
+  text-decoration: none;
+}
+.home-page button {
+  cursor: pointer;
+}

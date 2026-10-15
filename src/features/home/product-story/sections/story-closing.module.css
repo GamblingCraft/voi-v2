@@ -1,0 +1,19 @@
+.closing {
+  position: relative;
+  isolation: isolate;
+}
+.backdrop {
+  position: sticky;
+  top: 0;
+  z-index: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .backdrop {
+    position: relative;
+  }
+}
+
+.foreground {
+  position: relative;
+  z-index: 1;
+}

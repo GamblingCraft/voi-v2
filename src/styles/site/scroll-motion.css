@@ -1,0 +1,49 @@
+@supports (animation-timeline: view()) {
+  .voi-history {
+    view-timeline-name: --history;
+  }
+  .voi-history-photo {
+    animation: voiPhotoDrift linear both;
+    animation-timeline: --history;
+    animation-range: entry 0% exit 100%;
+  }
+  .voi-history-photo:nth-child(even) {
+    animation-direction: reverse;
+  }
+  .voi-product-cloud {
+    view-timeline-name: --products;
+  }
+  .cloud-product {
+    animation: voiProductDrift linear both;
+    animation-timeline: --products;
+    animation-range: entry 0% exit 100%;
+  }
+  @keyframes voiPhotoDrift {
+    from {
+      translate: 0 65px;
+    }
+    to {
+      translate: 0 -65px;
+    }
+  }
+  @keyframes voiProductDrift {
+    0% {
+      translate: 0 110px;
+      opacity: 0.3;
+    }
+    35%,
+    65% {
+      opacity: 1;
+    }
+    100% {
+      translate: 0 -110px;
+      opacity: 0.8;
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .voi-history-photo,
+  .cloud-product {
+    animation: none !important;
+  }
+}

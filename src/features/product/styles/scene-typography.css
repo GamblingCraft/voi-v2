@@ -1,0 +1,85 @@
+.product {
+  scroll-behavior: auto;
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) {
+  /* Mobile owns a separate fixed renderer; the desktop host takes no space. */
+  .product #product-scene {
+    display: none;
+  }
+}
+.product {
+  overflow-x: hidden;
+}
+.product * {
+  font-family: var(--font-body), sans-serif;
+}
+.product h1 *,
+.product h2 * {
+  font-family: var(--font-display), sans-serif;
+}
+.product .voi-weight button {
+  height: auto;
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.product h1,
+.product h2 {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 400;
+}
+.product h3,
+.product h4,
+.product p {
+  font-family: var(--font-body), sans-serif;
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) {
+  .product #hero h1,
+  .product #hero h3 {
+    visibility: hidden;
+  }
+  .product #hero .hero-description {
+    top: 180vw;
+  }
+}
+.product #brand-heading h3 {
+  font-size: 2.45vw;
+}
+.product #brand-heading-primary,
+.product #brand-heading-secondary,
+.product #brand-heading-tertiary {
+  line-height: 1.05;
+}
+.product :focus-visible {
+  outline: 2px solid #285d91;
+  outline-offset: 5px;
+}
+.product .voi-weight {
+  display: flex;
+  gap: 8px;
+}
+.product .voi-weight button {
+  margin: 8px 0;
+}
+.product .voi-weight button.active {
+  background: #122a38;
+  color: white;
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) {
+  .product #brand-heading h3 {
+    font-size: 6vw;
+  }
+  .product-root #content {
+    width: 100vw;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .product * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .product #product-scene {
+    filter: none;
+  }
+}

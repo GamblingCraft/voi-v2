@@ -1,0 +1,47 @@
+{
+  "/media/product/textures/kraft-front.jpg": {
+    "url": "/media/product/media/optimized/362207ec87311d58.ktx2",
+    "width": 1890,
+    "height": 2362
+  },
+  "/media/product/textures/kraft-back.jpg": {
+    "url": "/media/product/media/optimized/cc6bd6e44948fc31.ktx2",
+    "width": 1890,
+    "height": 2362
+  },
+  "/media/product/textures/cup-crop.png": {
+    "url": "/media/product/media/optimized/9849bc4060e69292.ktx2",
+    "width": 628,
+    "height": 613
+  },
+  "/media/product/textures/pvd-2-alpha.png": {
+    "url": "/media/product/media/optimized/8f9c438d9962699a.ktx2",
+    "width": 1600,
+    "height": 2000
+  },
+  "/media/product/textures/pvd-2-back-alpha.png": {
+    "url": "/media/product/media/optimized/13fe020d30e98587.ktx2",
+    "width": 1600,
+    "height": 2000
+  },
+  "/media/product/textures/pvd-3-alpha.png": {
+    "url": "/media/product/media/optimized/55e15400f9e095e0.ktx2",
+    "width": 1396,
+    "height": 2048
+  },
+  "/media/product/textures/pvd-3-back-alpha.png": {
+    "url": "/media/product/media/optimized/221a7888e3b5b894.ktx2",
+    "width": 1396,
+    "height": 2048
+  },
+  "/media/product/textures/pvd-5-alpha.png": {
+    "url": "/media/product/media/optimized/12131b9c1111ab6e.ktx2",
+    "width": 1434,
+    "height": 2048
+  },
+  "/media/product/textures/pvd-5-back-alpha.png": {
+    "url": "/media/product/media/optimized/2ade0c87fe13ddac.ktx2",
+    "width": 1434,
+    "height": 2048
+  }
+}

@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-background);
+  color: var(--color-text);
+  scroll-behavior: smooth;
+  /* Keep page and fixed-header geometry stable while menu scroll locking hides the scrollbar. */
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #4a555a var(--color-background);
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body, sans-serif), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+body.is-intro-active {
+  overflow: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+html[data-site="public"] body {
+  font-synthesis: none;
+}
+
+html[data-site="public"] :is(button, [role="button"], [data-ui-action]),
+html[data-site="public"] :is(nav, [data-ui-navigation]) a {
+  font-weight: var(--type-action-weight);
+  font-synthesis: weight;
+}
+
+html[data-site="public"] :where(h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+html[data-site="public"] :is(h1, h2, h3, h4, h5, h6, [role="heading"]),
+html[data-site="public"]
+  :is(h1, h2, h3, h4, h5, h6, [role="heading"])
+  :where(*) {
+  text-transform: uppercase;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+html[data-site="public"] :is(input, textarea, select):focus {
+  outline: none;
+  border-color: currentColor;
+  box-shadow: 0 1px 0 currentColor;
+}
+
+html[data-site="public"]
+  input:is([type="radio"], [type="checkbox"]):focus-visible
+  + :is(span, svg) {
+  outline-color: currentColor;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #122a38;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 47.99rem) {
+  :root {
+    --header-height: 4.5rem;
+  }
+}
+
+/* Links stay unadorned; component hover colors and keyboard focus remain. */
+a {
+  text-decoration: none;
+}
+
+html[data-site="public"] main :where(p, li, dd) {
+  font-weight: var(--type-body-weight);
+}

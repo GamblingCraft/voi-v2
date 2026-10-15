@@ -1,0 +1,108 @@
+.catalog {
+  --paper: #ffffff;
+  --ink: #122a38;
+  --muted: #53636e;
+  --line: #d4dce1;
+  min-height: 100svh;
+  padding: calc(var(--header-height) + 18px)
+    max(var(--page-gutter), calc((100vw - 1440px) / 2))
+    var(--catalog-bottom-spacing, 0px);
+  background: var(--paper);
+  color: var(--ink);
+}
+.catalog :where(h1, h2, h3) {
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 400;
+  line-height: var(--type-heading-leading);
+  letter-spacing: var(--type-heading-tracking);
+}
+.catalog a {
+  text-decoration: none;
+}
+.catalog .actionLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-height: var(--button-height);
+  padding: var(--button-padding);
+  border: 1px solid var(--button-ink);
+  border-radius: var(--button-radius);
+  background: transparent;
+  color: var(--button-ink);
+  font:
+    400 16px/1.3 var(--font-body),
+    sans-serif;
+  text-decoration: none;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+.catalog .actionLink:hover {
+  background: var(--button-ink);
+  border-color: var(--button-ink);
+  color: var(--button-paper);
+}
+.catalog .actionLight {
+  background: transparent;
+  border-color: var(--button-paper);
+  color: var(--button-paper);
+}
+.catalog .actionLight:hover {
+  background: var(--button-paper);
+  border-color: var(--button-paper);
+  color: var(--button-ink);
+}
+@media (prefers-reduced-motion: reduce) {
+  .catalog .actionLink {
+    transition: none;
+  }
+}
+.catalog :is(a, button, input, select):focus-visible {
+  outline: 2px solid #176585;
+  outline-offset: 4px;
+}
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+.breadcrumb a {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--button-height);
+  border: 1px solid var(--ink);
+  border-radius: var(--button-radius);
+  background: var(--ink);
+  color: white;
+  padding: var(--button-padding);
+  font-size: 16px;
+  cursor: pointer;
+
+  min-width: min(180px, 100%);
+  text-align: center;
+  font-family: var(--font-body), sans-serif;
+}
+.button:hover {
+  background: #294d61;
+}
+@media (max-width: 600px) {
+  .catalog {
+    padding-top: calc(var(--header-height) + 8px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .catalog * {
+    transition: none;
+  }
+}

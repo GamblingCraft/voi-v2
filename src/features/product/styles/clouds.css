@@ -1,0 +1,168 @@
+/* The scroll runway after hero lets the cloud layers pass before the manifesto. */
+.product #voi-cloud-transition {
+  position: relative;
+  height: var(--product-cloud-runway);
+  width: 100%;
+  pointer-events: none;
+  background: transparent;
+}
+.product #brand-story {
+  padding-top: var(--product-story-gap);
+  background: #f6f8f8;
+}
+.product #voi-cloud-layer,
+.product #voi-cloud-zip {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+.product #voi-cloud-layer {
+  z-index: 100000;
+  overflow: hidden;
+  background: transparent;
+}
+.product #voi-cloud-zip {
+  z-index: 100001;
+}
+.product #voi-cloud-layer[hidden],
+.product #voi-cloud-zip[hidden] {
+  display: none;
+}
+.product .voi-clouds,
+.product .voi-cloudMist {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.product .voi-clouds {
+  z-index: 1;
+  transform: translate3d(0, var(--cloud-front-y, 100%), 0);
+}
+.product #voi-cloud-layer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f6f8f8;
+  opacity: var(--cloud-cover, 0);
+  z-index: 0;
+}
+.product .voi-clouds img,
+.product .voi-cloudMist img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  user-select: none;
+}
+.product .voi-frontCloud {
+  z-index: 2;
+}
+.product .voi-rearCloud {
+  z-index: 1;
+  transform: translate3d(0, var(--cloud-rear-y, 0%), 0);
+}
+.product .voi-cloudMist {
+  z-index: 3;
+  opacity: var(--cloud-mist-opacity, 0);
+  transform: perspective(100svh) rotateX(var(--cloud-mist-tilt, 90deg));
+  transform-origin: center bottom;
+}
+body.voi-cloud-active .product #product-scene {
+  z-index: 0 !important;
+}
+body.voi-cloud-active .product #mobile-scene {
+  z-index: 0 !important;
+}
+/* Use one stable viewport for touch WebGL, backgrounds and docking geometry.
+   Browser toolbar height changes must not resize the scene during a swipe. */
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) {
+  .product #mobile-scene {
+    top: 0;
+    left: 0;
+    height: 100svh;
+  }
+  .product #zip-landscape-background,
+  .product #pvd-landscape-background,
+  .product #cup-landscape-background,
+  .product #cup-landscape-background > .product-stage.cup-stage {
+    height: 100svh;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .product #voi-cloud-transition {
+    height: var(--product-cloud-runway);
+  }
+  .product #zip-landscape,
+  .product #pvd-landscape,
+  .product #cup-landscape {
+    height: 160vh;
+  }
+}
+.product #cup-story h3 {
+  display: none !important;
+}
+.product #cup-heading {
+  transform: none !important;
+  animation: none !important;
+  white-space: normal;
+  text-align: left;
+}
+.product #cup-story > h2 {
+  width: 76vw;
+  left: 12vw;
+  font-size: var(--p1);
+  font-weight: 400;
+  overflow: visible;
+  white-space: normal;
+  margin-top: 0;
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) {
+  .product #cup-story > h2 {
+    width: 96vw;
+    left: 2vw;
+    font-size: 14.2vw;
+    line-height: 1.05;
+  }
+}
+/* One continuous paper tone from the cloud mist into the product sections. */
+body.voi-after-clouds .product #bg {
+  background: #f6f8f8 !important;
+}
+.product #brand-story,
+.product #zip-story,
+.product #pvd-story,
+.product #cup-story {
+  background: #f6f8f8 !important;
+  isolation: isolate;
+}
+
+/* Hero, cloud runway and manifesto share one paper surface from first paint. */
+.product #bg,
+body.voi-after-clouds .product #bg {
+  background: #f6f8f8 !important;
+}
+/* Sliding cloud images have opaque lower edges; dissolve them into the paper. */
+.product .voi-clouds img,
+.product .voi-cloudMist img {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 72%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%);
+}
+
+/* Closing cutouts belong to the heading; no image runway follows the CTA. */
+.product #closing-story {
+  height: auto !important;
+  padding-bottom: 7vw;
+}
+.product #closing-story #closing-cup,
+.product #closing-story #closing-zip {
+  background-color: transparent;
+}

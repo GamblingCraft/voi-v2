@@ -1,0 +1,29 @@
+.recommendations {
+  margin-top: 56px;
+}
+.recommendationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 280px);
+  gap: 20px;
+  align-items: stretch;
+}
+@media (max-width: 650px) {
+  .recommendationGrid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 260px;
+    justify-content: start;
+    gap: 14px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    padding: 4px 4px 16px;
+  }
+  .recommendationGrid > article {
+    scroll-snap-align: start;
+  }
+}
+.recommendations > h2 {
+  margin: 0 0 28px !important;
+  font-size: 34px;
+}

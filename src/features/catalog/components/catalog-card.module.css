@@ -1,0 +1,222 @@
+.card {
+  --muted: #53636e;
+  color: #122a38;
+  font-family: var(--font-body), sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 24px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e0e6ea;
+}
+.cardTop {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.productTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.productTags span {
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #f1f4f5;
+  color: #425b69;
+  font-size: 11px;
+  line-height: 1.35;
+}
+.cardTop > :last-child {
+  flex-shrink: 0;
+}
+.cardTop > span:last-child {
+  text-align: right;
+}
+.card h3 {
+  font-family: var(--font-editorial), sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 12px 0 0;
+  font-size: 34px;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+.card a {
+  color: inherit;
+  text-decoration: none;
+}
+.productMedia {
+  position: relative;
+  display: block;
+  aspect-ratio: 1.45;
+  margin: 12px -8px 8px;
+}
+.productMedia img {
+  object-fit: contain;
+  padding: 12px 18%;
+}
+.productMedia[data-shape="cylinder"] img {
+  padding: 12px 24%;
+}
+.description {
+  min-height: 48px;
+  margin: 8px 0 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.cardSpecs {
+  margin: 0 0 20px;
+  font-size: 12px;
+}
+.cardSpecs > div {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid #e6ecef;
+}
+.cardSpecs dt {
+  color: var(--muted);
+}
+.cardSpecs dd {
+  margin: 0;
+  text-align: right;
+}
+@media (min-width: 1500px) {
+  .productMedia {
+    aspect-ratio: 1.1;
+  }
+  .card {
+    padding: 20px;
+  }
+}
+@media (max-width: 1100px) {
+  .card {
+    padding: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .card {
+    padding: 22px;
+  }
+  .productMedia {
+    aspect-ratio: 1.4;
+  }
+  .card h3 {
+    font-size: 34px;
+  }
+  .description {
+    min-height: 0;
+  }
+}
+
+.card h3 {
+  font-size: 26px;
+  line-height: 1.2;
+  min-height: 62px;
+}
+.cardSpecs dt {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.card.compactCard {
+  padding: 18px;
+}
+.compactCard h3 {
+  font-size: 22px;
+  min-height: 53px;
+}
+.compactCard .cardTop {
+  font-size: 11px;
+  gap: 8px;
+}
+.compactCard .productMedia {
+  height: 150px;
+  aspect-ratio: auto;
+  margin: 8px 0 16px;
+}
+.compactCard .productMedia img,
+.compactCard .productMedia[data-shape="cylinder"] img {
+  padding: 8px 20%;
+}
+.productMedia[data-shape="loose"] img {
+  padding: 4px 5%;
+}
+.productMedia[data-shape="block"] img {
+  padding: 0;
+  object-fit: contain;
+}
+
+@media (max-width: 47.99rem) {
+  .card.horizontalMobile {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    column-gap: 14px;
+    row-gap: 10px;
+    padding: 14px;
+  }
+  .horizontalMobile .cardTop {
+    grid-column: 1 / -1;
+  }
+  .horizontalMobile h3 {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    min-height: 0;
+    font-size: clamp(14px, 4.4vw, 20px);
+  }
+  .horizontalMobile .productMedia {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    align-self: center;
+    height: 120px;
+    margin: 0;
+  }
+  .horizontalMobile .productMedia img,
+  .horizontalMobile .productMedia[data-shape="cylinder"] img {
+    padding: 0;
+  }
+  .horizontalMobile > div:last-child {
+    grid-column: 2;
+    grid-row: 3;
+    margin: 0;
+  }
+  .horizontalMobile fieldset {
+    margin-bottom: 10px;
+  }
+  .horizontalMobile fieldset legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .horizontalMobile fieldset > div {
+    gap: 6px;
+  }
+  .horizontalMobile fieldset label {
+    flex: 1;
+  }
+  .horizontalMobile fieldset label span {
+    min-width: 44px;
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+  .horizontalMobile > div:last-child > div {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .horizontalMobile > div:last-child > div > span:empty {
+    display: none;
+  }
+}

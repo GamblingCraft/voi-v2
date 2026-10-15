@@ -1,0 +1,232 @@
+.preview {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 420px;
+  padding: 20px;
+  border: 1px solid #dce3e7;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #142d3d;
+  box-shadow: 0 16px 48px rgb(14 34 48 / 16%);
+  font-family: var(--font-body), sans-serif;
+}
+.previewTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.previewTitle h2 {
+  margin: 0;
+  font:
+    400 25px/1.2 var(--font-editorial),
+    sans-serif;
+}
+.preview button {
+  cursor: pointer;
+}
+.previewTitle button,
+.remove {
+  display: grid;
+  min-width: 36px;
+  min-height: 36px;
+  place-items: center;
+  background: transparent;
+  color: inherit;
+  border: 0;
+}
+.items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: min(420px, 55svh);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.items li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e0e6e9;
+}
+.preview,
+.items {
+  scrollbar-width: none;
+}
+.preview::-webkit-scrollbar,
+.items::-webkit-scrollbar {
+  display: none;
+}
+.photo {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 80px;
+  background: #f0f4f6;
+  border-radius: 6px;
+}
+.photo img {
+  object-fit: contain;
+  padding: 7px;
+}
+.itemInfo {
+  flex: 1;
+  min-width: 0;
+}
+.itemInfo > a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.itemBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+.itemBottom strong {
+  font-size: 14px;
+  white-space: nowrap;
+}
+.quantity {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dce3e7;
+  border-radius: var(--button-radius);
+}
+.quantity button {
+  display: grid;
+  place-items: center;
+  min-width: 32px;
+  min-height: 36px;
+  background: transparent;
+  border: 0;
+  color: inherit;
+}
+.quantity span {
+  min-width: 25px;
+  text-align: center;
+  font-size: 13px;
+}
+.remove {
+  min-width: 28px;
+  min-height: 32px;
+}
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+.summary strong {
+  font-size: 22px;
+}
+.checkout {
+  width: 100%;
+  min-height: var(--button-height);
+  border: 0;
+  border-radius: var(--button-radius);
+  background: #142d3d;
+  color: white;
+  font-size: 16px;
+
+  text-align: center;
+  font-family: var(--font-body), sans-serif;
+}
+.checkout:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+.empty {
+  padding: 20px 0;
+  font-size: 14px;
+}
+.empty a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: inherit;
+}
+.preview :is(button, a):focus-visible {
+  outline: 2px solid #2980a6;
+  outline-offset: 3px;
+}
+@media (max-width: 767px) {
+  .preview {
+    position: fixed;
+    top: calc(var(--header-height) + 8px);
+    right: 16px;
+    width: min(420px, calc(100vw - 32px));
+    padding: 16px;
+    max-height: calc(100svh - var(--header-height) - 28px);
+    overflow: auto;
+  }
+  .quantity button {
+    min-width: 36px;
+    min-height: 44px;
+  }
+  .photo {
+    width: 52px;
+  }
+  .photo img {
+    width: 52px;
+  }
+  .items li {
+    gap: 8px;
+  }
+}
+
+/* The same separate glass layer as the footer and hero controls. */
+.preview {
+  background: transparent;
+  color: #f6f8f8;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: none;
+  isolation: isolate;
+  z-index: 5;
+}
+.preview::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  background: rgb(20 14 7 / 40%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.items li,
+.quantity {
+  border-color: #ffffff30;
+}
+.photo {
+  background: #ffffff14;
+}
+.checkout {
+  background: #ffffff12;
+  color: #f6f8f8;
+  border: 1px solid #ffffff30;
+}
+.preview :is(button, a):focus-visible {
+  outline-color: currentColor;
+}
+
+.preview {
+  padding: 8px;
+}
+.content {
+  position: relative;
+  padding: 12px;
+  background: rgb(0 0 0 / 28%);
+  border-radius: 6px;
+}

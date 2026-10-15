@@ -1,0 +1,456 @@
+/* First product locks into the recess in the ice photograph. */
+.product-root #zip-showcase {
+  --showcase-opacity: 0;
+  --card-opacity: 0;
+  --card-offset: 28px;
+  visibility: hidden;
+}
+.product-root #zip-showcase.is-active {
+  visibility: visible;
+}
+.product #zip-landscape {
+  position: relative;
+  height: 180vh;
+}
+.product #zip-landscape > .product-stage.zip-stage {
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+}
+.product #zip-landscape + #pvd-story {
+  margin-top: 0;
+  padding-top: 6vh;
+}
+.product #zip-landscape-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: center/cover no-repeat;
+  pointer-events: none;
+}
+.product #product-scene,
+.product #mobile-scene {
+  z-index: 100;
+  pointer-events: none;
+}
+/* Only the hero places the canvas underneath its text. */
+body.voi-hero-active .product #product-scene,
+body.voi-hero-active .product #mobile-scene {
+  z-index: 0;
+}
+.product #zip-landscape #zip-border {
+  visibility: hidden;
+}
+.product-root #zip-model-target {
+  position: fixed;
+  pointer-events: none;
+  visibility: hidden;
+}
+body.zip-showcase-active .product #product-scene,
+body.zip-showcase-active .product #mobile-scene {
+  z-index: 100;
+  filter: none !important;
+  pointer-events: none;
+}
+body.zip-showcase-active .product #zip-border {
+  visibility: hidden;
+}
+.product-root #zip-product-card {
+  position: fixed;
+  left: auto;
+  right: 4.4vw;
+  top: 50%;
+  z-index: 100001;
+  width: clamp(240px, 22vw, 310px);
+  opacity: var(--card-opacity);
+  transform: translate(
+    var(--card-offset),
+    calc(-50% + var(--scene-offset, 0px))
+  );
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.product-root #zip-showcase.card-ready #zip-product-card {
+  pointer-events: auto;
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) {
+  .product-root #zip-product-card {
+    right: 16px;
+    left: 16px;
+    top: auto;
+    bottom: 110px;
+    width: auto;
+    transform: translateY(calc(var(--card-offset) + var(--scene-offset, 0px)));
+  }
+}
+/* Stacked product layout for both device orientations. */
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) {
+  .product #brand-heading-mobile {
+    font-size: clamp(23px, 5.9vw, 42px);
+    line-height: 1.15;
+  }
+  .product #brand-heading-mobile > div {
+    height: auto;
+    overflow: visible;
+  }
+  .product #brand-content p,
+  .product #zip-content p,
+  .product #pvd-content p,
+  .product .cooltext p,
+  .product #closing-content p {
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+  .product #zip-story h2 {
+    font-size: 15vw;
+    line-height: 1.05;
+  }
+  .product #pvd-story h2 {
+    font-size: 14.2vw;
+    line-height: 1.05;
+  }
+  .product #pvd-story .hotspicy {
+    position: relative;
+    top: auto;
+    left: 2vw;
+    right: auto;
+    width: 96vw;
+    margin: 8vw 0;
+  }
+  .product #pvd-content {
+    margin-top: 10vw;
+  }
+  .product .voi-weight {
+    left: 2vw !important;
+    width: 96vw;
+    flex-wrap: wrap;
+    margin: 4vw 0;
+  }
+  .product .voi-weight button {
+    min-height: 40px;
+    padding: 8px 18px;
+    border: 1px solid;
+    border-radius: 30px;
+    background: transparent;
+  }
+  .product-root #zip-product-card {
+    bottom: calc(clamp(28px, 7vw, 58px) + 68px + env(safe-area-inset-bottom));
+    max-width: 580px;
+  }
+  .product #footer-stage button a {
+    font-size: clamp(18px, 5vw, 40px);
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) {
+  .product #brand-content p,
+  .product #zip-content p,
+  .product #pvd-content p,
+  .product .cooltext p,
+  .product #closing-content p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 599px) {
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) {
+  .product #zip-content > .desktop-only {
+    display: block;
+  }
+  .product #zip-content p {
+    padding: 0 2vw;
+  }
+  .product #hero .hero-description {
+    top: 180vw;
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)),
+  (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) and (orientation: landscape) {
+  .product #hero,
+  .product #mobile-scene {
+    height: 100svh;
+  }
+  .product #zip-landscape,
+  .product #pvd-landscape,
+  .product #cup-landscape {
+    height: 240svh;
+  }
+  .product #pvd-landscape + #cup-story,
+  .product #cup-landscape + #closing-story {
+    margin-top: -60svh;
+  }
+  .product #hero .hero-description {
+    top: auto;
+    bottom: calc(clamp(28px, 7vw, 58px) + 100px);
+    font-size: 12px;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) and (orientation: landscape) {
+  .product-root #zip-product-card {
+    left: auto;
+    right: 16px;
+    top: 50%;
+    bottom: auto;
+    width: 250px;
+    transform: translateY(calc(-50% + var(--scene-offset, 0px)));
+  }
+}
+body.voi-hero-active .product #hero {
+  z-index: 1;
+}
+/* Hide obsolete decorative placeholders. */
+.product .voi-decor-placeholder {
+  display: none !important;
+}
+.product #barcode1 {
+  display: none;
+}
+.product #pvd-frame .lat,
+.product #cup-frame .lat {
+  display: none;
+}
+/* Hide obsolete controls outside the shared navigation shell. */
+.product #footer-stage button {
+  display: none !important;
+  pointer-events: none !important;
+}
+.product #footer-stage {
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 36px 6vw;
+  box-sizing: border-box;
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) and (orientation: portrait) {
+  .product-root #zip-product-card {
+    bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)),
+  (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) and (orientation: landscape) {
+  .product #hero .hero-description {
+    bottom: 32px;
+  }
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) {
+  .product #mobile-scene,
+  .product #mobile-scene canvas {
+    touch-action: pan-y;
+    pointer-events: none !important;
+  }
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) and (orientation: landscape) {
+  .product .product-stage.pvd-stage,
+  .product .product-stage.cup-stage {
+    height: 120svh;
+  }
+}
+/* Russian marquee text must remain one continuous line at narrow widths. */
+.product #cup-heading {
+  white-space: nowrap;
+  width: max-content;
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) and (orientation: landscape) {
+  .product #pvd-frame table,
+  .product #cup-frame table {
+    width: 100%;
+    font-size: 11px;
+    line-height: 1.2;
+  }
+  .product #pvd-frame table th,
+  .product #pvd-frame table td,
+  .product #cup-frame table th,
+  .product #cup-frame table td {
+    width: auto;
+    font-size: 11px;
+  }
+}
+/* Give the foreground time to settle while the next section scrolls over it. */
+.product #zip-landscape,
+.product #pvd-landscape {
+  height: 240vh;
+  isolation: isolate;
+}
+.product #zip-landscape + #pvd-story,
+.product #pvd-landscape + #cup-story {
+  position: relative;
+  margin-top: -60vh;
+  padding-top: 6vh;
+  z-index: 1;
+  background: #eeedec;
+}
+.product #pvd-landscape {
+  position: relative;
+}
+.product #pvd-landscape > .product-stage.pvd-stage {
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+}
+.product #pvd-landscape-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: center/cover no-repeat;
+  pointer-events: none;
+}
+.product #pvd-landscape #pvd-border {
+  visibility: hidden;
+}
+.product-root #pvd-showcase {
+  --showcase-opacity: 0;
+  --card-opacity: 0;
+  --card-offset: 28px;
+  visibility: hidden;
+}
+.product-root #pvd-showcase.is-active {
+  visibility: visible;
+}
+.product-root #pvd-model-target {
+  position: fixed;
+  visibility: hidden;
+  pointer-events: none;
+}
+body.pvd-showcase-active .product #product-scene,
+body.pvd-showcase-active .product #mobile-scene {
+  filter: none !important;
+}
+.product-root #pvd-product-card {
+  position: fixed;
+  left: var(--pvd-card-left, 27vw);
+  top: var(--pvd-card-top, 55vh);
+  z-index: 100001;
+  width: var(--pvd-card-width, 260px);
+  opacity: var(--card-opacity);
+  transform: translate(
+    calc(-50% - var(--card-offset)),
+    calc(-50% + var(--scene-offset, 0px))
+  );
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.product-root #pvd-showcase.card-ready #pvd-product-card {
+  pointer-events: auto;
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) and (orientation: portrait) {
+  .product #pvd-landscape-background {
+    background-position: 78% center;
+  }
+  .product-root #pvd-product-card {
+    left: 16px;
+    right: 16px;
+    top: auto;
+    bottom: calc(24px + env(safe-area-inset-bottom));
+    width: auto;
+    max-width: 580px;
+    transform: translateY(calc(var(--card-offset) + var(--scene-offset, 0px)));
+  }
+}
+@media (max-height: 600px) and (orientation: landscape) {
+  .product-root #pvd-product-card {
+    width: clamp(220px, var(--pvd-card-width), 250px);
+  }
+}
+/* The cup shares the same soft hold and overlap. */
+.product #cup-landscape {
+  position: relative;
+  height: 240vh;
+  isolation: isolate;
+}
+.product #cup-landscape-background {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100vw;
+  height: 100vh;
+  background: #eeedec;
+}
+.product #cup-landscape-background > .product-stage.cup-stage {
+  height: 100vh;
+}
+.product #cup-landscape + #closing-story {
+  position: relative;
+  margin-top: -60vh;
+  z-index: 999;
+}
+.product #zip-landscape + #pvd-story,
+.product #pvd-landscape + #cup-story {
+  overflow: clip;
+}
+/* Cup settles lid-up on the closing-cta surface. */
+.product #cup-landscape-background {
+  background: center/cover no-repeat;
+}
+.product #cup-landscape #cup-border {
+  visibility: hidden;
+}
+.product #cup-landscape-background::after {
+  content: "";
+  position: absolute;
+  left: 40%;
+  top: 45%;
+  width: 20%;
+  height: 10%;
+  background: radial-gradient(ellipse, #18374827, transparent 70%);
+  filter: blur(12px);
+  pointer-events: none;
+}
+.product-root #cup-showcase {
+  --showcase-opacity: 0;
+  --card-opacity: 0;
+  --card-offset: 28px;
+  visibility: hidden;
+}
+.product-root #cup-showcase.is-active {
+  visibility: visible;
+}
+.product-root #cup-model-target {
+  position: fixed;
+  visibility: hidden;
+  pointer-events: none;
+}
+body.cup-showcase-active .product #product-scene,
+body.cup-showcase-active .product #mobile-scene {
+  filter: none !important;
+}
+.product-root #cup-product-card {
+  position: fixed;
+  left: var(--cup-card-left, 13vw);
+  top: 50%;
+  z-index: 100001;
+  width: clamp(240px, 22vw, 310px);
+  opacity: var(--card-opacity);
+  transform: translate(
+    calc(0px - var(--card-offset)),
+    calc(-50% + var(--scene-offset, 0px))
+  );
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.product-root #cup-showcase.card-ready #cup-product-card {
+  pointer-events: auto;
+}
+@media (max-width: 1024px) and ((hover: none) or (max-width: 899px) or (orientation: portrait)) and (orientation: portrait) {
+  .product #cup-landscape-background {
+    background-position: 62% center;
+  }
+  .product-root #cup-product-card {
+    left: 16px;
+    right: 16px;
+    top: auto;
+    bottom: calc(24px + env(safe-area-inset-bottom));
+    width: auto;
+    max-width: 580px;
+    transform: translateY(calc(var(--card-offset) + var(--scene-offset, 0px)));
+  }
+}
+@media (max-height: 600px) and (orientation: landscape) {
+  .product-root #cup-product-card {
+    left: 7vw;
+    width: 240px;
+  }
+}

@@ -1,0 +1,211 @@
+.search {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 3rem;
+  transition:
+    width 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    flex-basis 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.search[data-open="true"] {
+  width: 17.5rem;
+  flex-basis: 17.5rem;
+}
+
+.toggle {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    color 200ms ease,
+    background-color 200ms ease,
+    transform 200ms ease;
+}
+
+.toggle:hover {
+  background: rgb(0 0 0 / 6%);
+  transform: translateY(-1px);
+}
+
+.search[data-open="true"] .toggle {
+  color: #122a38;
+}
+
+.form {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  overflow: hidden;
+  border: 0;
+  border-bottom: 1px solid #9aadb1;
+  border-radius: 0;
+  background: #f6f8f8;
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(12px);
+  transition: opacity 180ms ease;
+}
+
+.search[data-open="true"] .form {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fieldIcon {
+  position: absolute;
+  left: 0.8rem;
+  flex: 0 0 auto;
+  color: #58717b;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0 3.5rem 0 2.45rem;
+  outline: 0;
+  background: transparent;
+  color: #122a38;
+  font:
+    400 0.7rem/1 var(--font-ui),
+    sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.input::placeholder {
+  color: #58717b;
+}
+
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.srSubmit {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 47.99rem) {
+  .search,
+  .toggle {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .search {
+    flex-basis: 2.75rem;
+  }
+
+  .search[data-open="true"] {
+    width: 12rem;
+    flex-basis: 12rem;
+  }
+
+  .form {
+    height: 2.75rem;
+  }
+
+  .input {
+    padding-right: 3.35rem;
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 29.99rem) {
+  .search[data-open="true"] {
+    width: 9rem;
+    flex-basis: 9rem;
+  }
+
+  .fieldIcon {
+    left: 0.65rem;
+  }
+
+  .input {
+    padding-left: 2.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form,
+  .toggle,
+  .search {
+    transition: none;
+  }
+}
+
+.form {
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  backdrop-filter: none;
+  isolation: isolate;
+}
+.form::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: rgb(20 14 7 / 40%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  pointer-events: none;
+}
+.input,
+.fieldIcon,
+.search[data-open="true"] .toggle {
+  color: #f6f8f8;
+}
+.input::placeholder {
+  color: #ffffffb3;
+}
+
+html[data-site="public"] .search .input {
+  font:
+    400 10px/1.4 var(--font-ui),
+    sans-serif;
+  letter-spacing: 0.02em;
+}
+html[data-site="public"] .search .input::placeholder {
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+/* The expanding field shares the header pill's existing glass. */
+.form {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.form::before {
+  content: none;
+}
+.toggle:hover,
+.search[data-open="true"] .toggle {
+  background: transparent;
+}
